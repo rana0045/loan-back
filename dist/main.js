@@ -18,7 +18,7 @@ import { CheckBlankHelper } from './helper/check/blank/check.blank.helper.js';
 import { ExpressConfig } from './vendor/index.js';
 import EventEmitter from 'events';
 import cookieParser from 'cookie-parser';
-import { TestController } from './utils/test/test.controller.js';
+// import { TestController } from './utils/test/test.controller.js';
 import { WebhookStripe } from './webhook/stripe/webhook.stripe.js';
 class MyEmitter extends EventEmitter {
 }
@@ -46,7 +46,7 @@ class Main extends ExpressConfig {
         }));
         // this.app.use(express_status_monitor());
         this.app.post('/webhook', WebhookStripe);
-        this.app.get('/', TestController);
+        // this.app.get('/', TestController);
         this.app.use(cookieParser());
         this.app.use(morgan('dev'));
         this.app.use(express.json());
