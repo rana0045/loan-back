@@ -14,9 +14,20 @@ import { Types } from 'mongoose';
 export namespace Business {
   type TString = string | null | undefined;
   type TUser = Types.ObjectId | null | undefined;
+  type TFileInfo = {
+    fieldname: TString;
+    originalname: TString;
+    encoding: TString;
+    mimetype: TString;
+    destination: TString;
+    filename: TString;
+    path: TString;
+    size: number;
+  };
 
   export interface Name {
     _id: TString;
+    user_id: TUser;
     name: TString;
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
@@ -45,9 +56,132 @@ export namespace Business {
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
-  export interface EIN{
+  export interface Ein {
     _id: TString;
     user_id: TUser;
-    
+    number: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface EinFile {
+    _id: TString;
+    user_id: TUser;
+    einFile: [TFileInfo];
+  }
+  export interface PhoneDetails {
+    _id: TString;
+    user_id: TUser;
+    phoneNumber: TString;
+    serviceProvider: TString;
+    faxNumber: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface EmailDetails {
+    _id: TString;
+    user_id: TUser;
+    website: TString;
+    email: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface License {
+    _id: TString;
+    user_id: TUser;
+    businessLicense: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface Bank {
+    _id: TString;
+    user_id: TUser;
+    account: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface Merchant {
+    _id: TString;
+    user_id: TUser;
+    account: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface Duns {
+    _id: TString;
+    user_id: TUser;
+    address: TString;
+    policy: boolean;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface Experian {
+    _id: TString;
+    user_id: TUser;
+    identificationNumber: TString;
+    policy: boolean;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface Equifax {
+    _id: TString;
+    user_id: TUser;
+    identificationNumber: TString;
+    policy: boolean;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface MonitorDunsFile {
+    _id: TString;
+    user_id: TUser;
+    file: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface MonitorExperianFile {
+    _id: TString;
+    user_id: TUser;
+    file: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface MonitorEquifaxFile {
+    _id: TString;
+    user_id: TUser;
+    file: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface LexisFile {
+    _id: TString;
+    user_id: TUser;
+    file: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+
+  export interface ChexSystemFile {
+    _id: TString;
+    user_id: TUser;
+    file: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuilding {
+    _id: TString;
+    user_id: TUser;
+    tradeAccount: TString;
+    appliedDate: TString;
+    paymentDate: TString;
+    approvedAmount: TString;
+    personalGrant: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuildingFile {
+    _id: TString;
+    user_id: TUser;
+    file: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
   }
 }

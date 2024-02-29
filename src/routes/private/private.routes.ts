@@ -19,6 +19,8 @@ import {
   OneRoutes,
   PackageRoutes,
   PaymentRoutes,
+  BusinessPackageRoutes,
+  BusinessRoutes
 } from '../../resources/index.js';
 
 export namespace PrivateRoutes {
@@ -32,5 +34,7 @@ export namespace PrivateRoutes {
     PaymentRoutes.index,
     ClientRoutes.index,
     LeadsRoutes.index,
+    BusinessPackageRoutes.index,
+    BusinessRoutes.index
   ]);
 }
