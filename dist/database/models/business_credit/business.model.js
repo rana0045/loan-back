@@ -1,1 +1,25 @@
-export {};
+import mongoose from 'mongoose';
+import { BusinessSchema } from './business.schema.js';
+export var BusinessModel;
+(function (BusinessModel) {
+    BusinessModel.NameModel = mongoose.model('business_name', BusinessSchema.NameSchema);
+    BusinessModel.AddressModel = mongoose.model('business_address', BusinessSchema.AddressSchema);
+    BusinessModel.EntityModel = mongoose.model('business_entity', BusinessSchema.EntitySchema);
+    BusinessModel.EinModel = mongoose.model('business_ein', BusinessSchema.EinSchema);
+    BusinessModel.EinFileModel = mongoose.model('business_ein_file', BusinessSchema.EinFileSchema);
+    BusinessModel.PhoneDetailsModel = mongoose.model('business_phone_details', BusinessSchema.PhoneDetailsSchema);
+    BusinessModel.EmailDetailsModel = mongoose.model('business_email_details', BusinessSchema.EmailDetailsSchema);
+    BusinessModel.LicenseModel = mongoose.model('business_license', BusinessSchema.LicenseSchema);
+    BusinessModel.BankModel = mongoose.model('business_bank', BusinessSchema.BankSchema);
+    BusinessModel.MerchantModel = mongoose.model('business_merchant', BusinessSchema.MerchantSchema);
+    BusinessModel.DunsModel = mongoose.model('business_duns', BusinessSchema.DunsSchema);
+    BusinessModel.ExperianModel = mongoose.model('business_experian', BusinessSchema.ExperianSchema);
+    BusinessModel.EquifaxModel = mongoose.model('business_equifax', BusinessSchema.EquifaxSchema);
+    BusinessModel.MonitorDunsFileModel = mongoose.model('business_monitor_duns_file', BusinessSchema.MonitorDunsFileSchema);
+    BusinessModel.MonitorExperianFileModel = mongoose.model('business_monitor_experian_file', BusinessSchema.MonitorExperianFileSchema);
+    BusinessModel.MonitorEquifaxFileModel = mongoose.model('business_monitor_equifax_file', BusinessSchema.MonitorEquifaxFileSchema);
+    BusinessModel.LexisModel = mongoose.model('business_lexis_file', BusinessSchema.LexisFileSchema);
+    BusinessModel.ChexSystemModel = mongoose.model('business_chex_system_file', BusinessSchema.ChexSystemFileSchema);
+    BusinessModel.StartBuildingModel = mongoose.model('business_start_building', BusinessSchema.StartBuildingSchema);
+    BusinessModel.StartBuildingFileModel = mongoose.model('business_start_building_file', BusinessSchema.StartBuildingFileSchema);
+})(BusinessModel = BusinessModel || (BusinessModel = {}));

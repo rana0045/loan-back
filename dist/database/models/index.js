@@ -18,3 +18,4 @@ export * from './password_session/password.session.model.js';
 export * from './user_info/bureau.credential.model.js';
 export * from './onboarded/onboarded.model.js';
 export * from './lead/lead.model.js';
+export * from './business_credit/business.model.js';
