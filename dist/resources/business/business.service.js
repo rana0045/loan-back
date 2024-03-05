@@ -1,3 +1,4 @@
+import { deleteFilesForIdentity } from '../../utils/delete/delete.utils.js';
 import { BusinessModel } from '../../database/models/business_credit/business.model.js';
 export var BusinessService;
 (function (BusinessService) {
@@ -232,6 +233,711 @@ export var BusinessService;
                 Success: true,
                 message: 'Phone Details get successfully',
                 data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.EmailDetails = async (req, res) => {
+        try {
+            const { website, email } = req.body;
+            const userId = res.locals.decode._id;
+            const newEmailDetails = new BusinessModel.EmailDetailsModel({
+                user_id: userId,
+                website,
+                email,
+            });
+            await newEmailDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Email Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetEmailDetails = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.EmailDetailsModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Email Details get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.License = async (req, res) => {
+        try {
+            const { businessLicense } = req.body;
+            const userId = res.locals.decode._id;
+            const newEmailDetails = new BusinessModel.LicenseModel({
+                user_id: userId,
+                businessLicense,
+            });
+            await newEmailDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Business License saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetLicense = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.LicenseModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Business License get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.BankAccount = async (req, res) => {
+        try {
+            const { account } = req.body;
+            const userId = res.locals.decode._id;
+            const newBankDetails = new BusinessModel.BankModel({
+                user_id: userId,
+                account,
+            });
+            await newBankDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Bank Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetBankAccount = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.BankModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Bank Details get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.MerchantBankAccount = async (req, res) => {
+        try {
+            const { account } = req.body;
+            const userId = res.locals.decode._id;
+            const newBankDetails = new BusinessModel.MerchantModel({
+                user_id: userId,
+                account,
+            });
+            await newBankDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Merchant Bank Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetMerchantBankAccount = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.MerchantModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Merchant Bank Details get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.Duns = async (req, res) => {
+        try {
+            const { address, policy } = req.body;
+            const userId = res.locals.decode._id;
+            const newBankDetails = new BusinessModel.DunsModel({
+                user_id: userId,
+                address,
+                policy,
+            });
+            await newBankDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Duns Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetDuns = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.DunsModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Duns Details get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.Experian = async (req, res) => {
+        try {
+            const { identificationNumber, policy } = req.body;
+            const userId = res.locals.decode._id;
+            const newBankDetails = new BusinessModel.ExperianModel({
+                user_id: userId,
+                identificationNumber,
+                policy,
+            });
+            await newBankDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Experian Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetExperian = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.ExperianModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Experian Details get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.Equifax = async (req, res) => {
+        try {
+            const { identificationNumber, policy } = req.body;
+            const userId = res.locals.decode._id;
+            const newBankDetails = new BusinessModel.EquifaxModel({
+                user_id: userId,
+                identificationNumber,
+                policy,
+            });
+            await newBankDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Equifax Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetEquifax = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.EquifaxModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'Equifax Details get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuilding = async (req, res) => {
+        try {
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
+            const userId = res.locals.decode._id;
+            const newBankDetails = new BusinessModel.StartBuildingModel({
+                user_id: userId,
+                tradeAccount,
+                appliedDate,
+                paymentDate,
+                approvedAmount,
+                personalGrant,
+            });
+            await newBankDetails.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuilding Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetStartBuilding = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const phoneDetails = await BusinessModel.StartBuildingModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuilding Details get successfully',
+                data: phoneDetails,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.EinFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const einFile = [...fileUploads?.einFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.EinFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.einFile?.map((file) => file?.filename), einFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.EinFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    einFile: einFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.MonitorDunsFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const monitorDunsFile = [...fileUploads?.monitorDunsFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.MonitorDunsFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.monitorDunsFile?.map((file) => file?.filename), monitorDunsFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.MonitorDunsFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    monitorDunsFile: monitorDunsFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.MonitorExperianFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const monitorExperianFile = [...fileUploads?.monitorExperianFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.MonitorExperianFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.monitorExperianFile?.map((file) => file?.filename), monitorExperianFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.MonitorExperianFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    monitorExperianFile: monitorExperianFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.MonitorEquifaxFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const monitorEquifaxFile = [...fileUploads?.monitorEquifaxFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.MonitorEquifaxFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.monitorEquifaxFile?.map((file) => file?.filename), monitorEquifaxFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.MonitorEquifaxFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    monitorEquifaxFile: monitorEquifaxFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.LexisFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const lexisFile = [...fileUploads?.lexisFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.LexisFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.lexisFile?.map((file) => file?.filename), lexisFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.LexisFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    lexisFile: lexisFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.ChexSystemFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const chexSystemFile = [...fileUploads?.chexSystemFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.ChexSystemFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.chexSystemFile?.map((file) => file?.filename), chexSystemFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.ChexSystemFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    chexSystemFile: chexSystemFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuildingFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const startBuildingFile = [...fileUploads?.startBuildingFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.StartBuildingFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.startBuildingFile?.map((file) => file?.filename), startBuildingFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.StartBuildingFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    startBuildingFile: startBuildingFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
             });
         }
         catch (e) {

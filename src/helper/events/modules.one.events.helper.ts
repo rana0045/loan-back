@@ -15,6 +15,7 @@ import { Request } from 'express';
 import { User } from '../../database/models/user/types.js';
 import moment from 'moment/moment.js';
 import { OnboardedModel } from '../../database/models/onboarded/onboarded.model.js';
+import { BusinessModel } from '../../database/models/business_credit/business.model.js';
 
 class ModuleOneEvent extends EventEmitter {}
 export const moduleOneEvent = new ModuleOneEvent();
@@ -44,11 +45,39 @@ const moduleOneSignUpParts = async (
       user_id: Credentials._id,
       signUp: true,
     });
+    const newEinFile = new BusinessModel.EinFileModel({
+      user_id: Credentials._id,
+    });
+    const newMonitorDunsFile = new BusinessModel.MonitorDunsFileModel({
+      user_id: Credentials._id,
+    });
+    const newMonitorExperianFile = new BusinessModel.MonitorExperianFileModel({
+      user_id: Credentials._id,
+    });
+    const newMonitorEquifaxFile = new BusinessModel.MonitorEquifaxFileModel({
+      user_id: Credentials._id,
+    });
+    const newLexisFile = new BusinessModel.LexisFileModel({
+      user_id: Credentials._id,
+    });
+    const newChexSystemFile = new BusinessModel.ChexSystemFileModel({
+      user_id: Credentials._id,
+    });
+    const newStartBuildingFile = new BusinessModel.StartBuildingFileModel({
+      user_id: Credentials._id,
+    });
 
     const userAddress = await newUserAddress.save();
     const userDetails = await newUserDetails.save();
     const individualIdentity = await newIndividualIdentity.save();
     const moduleOneStatus = await newModuleOneStatus.save();
+    const einFile = await newEinFile.save();
+    const monitorDunsFile = await newMonitorDunsFile.save();
+    const monitorExperianFile = await newMonitorExperianFile.save();
+    const monitorEquifaxFile = await newMonitorEquifaxFile.save();
+    const lexisFile = await newLexisFile.save();
+    const chexSystemFile = await newChexSystemFile.save();
+    const startBuildingFile = await newStartBuildingFile.save();
     console.log('User Address saved:', userAddress);
     console.log('User Details saved:', userDetails);
     console.log('User Individual Identity saved:', individualIdentity);

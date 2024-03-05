@@ -123,7 +123,7 @@ export var UserSchema;
             ref: 'user_credentials',
         },
         proofOfAddress1: [],
-        proofOfAddress2: [],
+        //proofOfAddress2: [],
         proofOfAddressDetails: {
             type: String,
             default: null,

@@ -133,28 +133,28 @@ export namespace Business {
   export interface MonitorDunsFile {
     _id: TString;
     user_id: TUser;
-    file: [TFileInfo];
+    monitorDunsFile: [TFileInfo];
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
   export interface MonitorExperianFile {
     _id: TString;
     user_id: TUser;
-    file: [TFileInfo];
+    monitorExperianFile: [TFileInfo];
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
   export interface MonitorEquifaxFile {
     _id: TString;
     user_id: TUser;
-    file: [TFileInfo];
+    monitorEquifaxFile: [TFileInfo];
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
   export interface LexisFile {
     _id: TString;
     user_id: TUser;
-    file: [TFileInfo];
+    lexisFile: [TFileInfo];
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
@@ -162,7 +162,7 @@ export namespace Business {
   export interface ChexSystemFile {
     _id: TString;
     user_id: TUser;
-    file: [TFileInfo];
+    chexSystemFile: [TFileInfo];
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
@@ -180,7 +180,7 @@ export namespace Business {
   export interface StartBuildingFile {
     _id: TString;
     user_id: TUser;
-    file: [TFileInfo];
+    startBuildingFile: [TFileInfo];
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }

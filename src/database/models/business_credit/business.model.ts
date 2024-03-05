@@ -69,11 +69,11 @@ export namespace BusinessModel {
       'business_monitor_equifax_file',
       BusinessSchema.MonitorEquifaxFileSchema,
     );
-  export const LexisModel = mongoose.model<Business.LexisFile>(
+  export const LexisFileModel = mongoose.model<Business.LexisFile>(
     'business_lexis_file',
     BusinessSchema.LexisFileSchema,
   );
-  export const ChexSystemModel = mongoose.model<Business.ChexSystemFile>(
+  export const ChexSystemFileModel = mongoose.model<Business.ChexSystemFile>(
     'business_chex_system_file',
     BusinessSchema.ChexSystemFileSchema,
   );

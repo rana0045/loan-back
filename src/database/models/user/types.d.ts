@@ -81,7 +81,7 @@ export namespace User {
     identityCard2: [TFileInfo];
     identityCardDetails: TString;
     proofOfAddress1: [TFileInfo];
-    proofOfAddress2: [TFileInfo];
+    //proofOfAddress2: [TFileInfo];
     proofOfAddressDetails: TString;
     socialSecurityCard1: [TFileInfo];
     socialSecurityCard2: [TFileInfo];

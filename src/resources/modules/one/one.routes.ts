@@ -42,7 +42,7 @@ export namespace OneRoutes {
       { name: 'proofOfAddress1', maxCount: 1 },
       { name: 'socialSecurityCard1', maxCount: 1 },
       { name: 'identityCard2', maxCount: 1 },
-      { name: 'proofOfAddress2', maxCount: 1 },
+      // { name: 'proofOfAddress2', maxCount: 1 },
       { name: 'socialSecurityCard2', maxCount: 1 },
     ]),
     validateRequest(OneValidation.docs),

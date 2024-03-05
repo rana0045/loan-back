@@ -215,7 +215,9 @@ export var OneService;
             const proofOfAddressArray1 = fileUploads?.proofOfAddress1?.map((file) => file);
             const socialSecurityCardArray1 = fileUploads?.socialSecurityCard1?.map((file) => file);
             const identityCardArray1 = fileUploads?.identityCard1?.map((file) => file);
-            const proofOfAddressArray2 = fileUploads?.proofOfAddress2?.map((file) => file);
+            // const proofOfAddressArray2 = fileUploads?.proofOfAddress2?.map(
+            //   (file) => file,
+            // );
             const socialSecurityCardArray2 = fileUploads?.socialSecurityCard2?.map((file) => file);
             const identityCardArray2 = fileUploads?.identityCard2?.map((file) => file);
             const userId = res.locals.decode._id;
@@ -228,7 +230,10 @@ export var OneService;
                 await deleteFilesForIdentity(oldUserData.proofOfAddress1?.map((file) => file?.filename), proofOfAddressArray1?.map((file) => file?.filename));
                 await deleteFilesForIdentity(oldUserData?.identityCard2?.map((file) => file?.filename), identityCardArray2?.map((file) => file?.filename));
                 await deleteFilesForIdentity(oldUserData.socialSecurityCard2?.map((file) => file?.filename), socialSecurityCardArray2?.map((file) => file?.filename));
-                await deleteFilesForIdentity(oldUserData.proofOfAddress2?.map((file) => file?.filename), proofOfAddressArray2?.map((file) => file?.filename));
+                // await deleteFilesForIdentity(
+                //   oldUserData.proofOfAddress2?.map((file) => file?.filename as string),
+                //   proofOfAddressArray2?.map((file) => file?.filename as string),
+                // );
             }
             const updatedUser = await UserModel.IndividualIdentityModel.findOneAndUpdate({ user_id: userId }, {
                 $set: {
@@ -237,7 +242,7 @@ export var OneService;
                     proofOfAddress1: proofOfAddressArray1,
                     identityCard2: identityCardArray2,
                     socialSecurityCard2: socialSecurityCardArray2,
-                    proofOfAddress2: proofOfAddressArray2,
+                    // proofOfAddress2: proofOfAddressArray2,
                 },
             }, { new: true });
             if (!updatedUser) {

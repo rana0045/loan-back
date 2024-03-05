@@ -9,7 +9,6 @@ export var BusinessSchema;
         name: {
             type: String,
             default: null,
-            unique: true,
         },
     }, {
         timestamps: true,
@@ -137,7 +136,6 @@ export var BusinessSchema;
         email: {
             type: String,
             default: null,
-            unique: true,
         },
     }, {
         timestamps: true,
@@ -240,7 +238,7 @@ export var BusinessSchema;
             type: Types.ObjectId,
             ref: 'user_credentials',
         },
-        file: [],
+        monitorDunsFile: [],
     }, {
         timestamps: true,
         versionKey: false,
@@ -250,7 +248,7 @@ export var BusinessSchema;
             type: Types.ObjectId,
             ref: 'user_credentials',
         },
-        file: [],
+        monitorExperianFile: [],
     }, {
         timestamps: true,
         versionKey: false,
@@ -260,7 +258,7 @@ export var BusinessSchema;
             type: Types.ObjectId,
             ref: 'user_credentials',
         },
-        file: [],
+        monitorEquifaxFile: [],
     }, {
         timestamps: true,
         versionKey: false,
@@ -270,7 +268,7 @@ export var BusinessSchema;
             type: Types.ObjectId,
             ref: 'user_credentials',
         },
-        file: [],
+        lexisFile: [],
     }, {
         timestamps: true,
         versionKey: false,
@@ -280,7 +278,7 @@ export var BusinessSchema;
             type: Types.ObjectId,
             ref: 'user_credentials',
         },
-        file: [],
+        chexSystemFile: [],
     }, {
         timestamps: true,
         versionKey: false,
@@ -319,7 +317,7 @@ export var BusinessSchema;
             type: Types.ObjectId,
             ref: 'user_credentials',
         },
-        file: [],
+        startBuildingFile: [],
     }, {
         timestamps: true,
         versionKey: false,

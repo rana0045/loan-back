@@ -48,7 +48,7 @@ export var OneValidation;
             proofOfAddress1: z.custom(),
             socialSecurityCard1: z.custom(),
             identityCard2: z.custom(),
-            proofOfAddress2: z.custom(),
+            // proofOfAddress2: z.custom<File>(),
             socialSecurityCard2: z.custom(),
         })
             .strict(),

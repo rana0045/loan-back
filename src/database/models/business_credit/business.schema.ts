@@ -11,7 +11,6 @@ export namespace BusinessSchema {
       name: {
         type: String,
         default: null,
-        unique: true,
       },
     },
     {
@@ -157,7 +156,6 @@ export namespace BusinessSchema {
       email: {
         type: String,
         default: null,
-        unique: true,
       },
     },
     {
@@ -282,7 +280,7 @@ export namespace BusinessSchema {
           type: Types.ObjectId,
           ref: 'user_credentials',
         },
-        file: [],
+        monitorDunsFile: [],
       },
       {
         timestamps: true,
@@ -297,7 +295,7 @@ export namespace BusinessSchema {
           type: Types.ObjectId,
           ref: 'user_credentials',
         },
-        file: [],
+        monitorExperianFile: [],
       },
       {
         timestamps: true,
@@ -311,7 +309,7 @@ export namespace BusinessSchema {
           type: Types.ObjectId,
           ref: 'user_credentials',
         },
-        file: [],
+        monitorEquifaxFile: [],
       },
       {
         timestamps: true,
@@ -324,7 +322,7 @@ export namespace BusinessSchema {
         type: Types.ObjectId,
         ref: 'user_credentials',
       },
-      file: [],
+      lexisFile: [],
     },
     {
       timestamps: true,
@@ -338,7 +336,7 @@ export namespace BusinessSchema {
           type: Types.ObjectId,
           ref: 'user_credentials',
         },
-        file: [],
+        chexSystemFile: [],
       },
       {
         timestamps: true,
@@ -385,7 +383,7 @@ export namespace BusinessSchema {
           type: Types.ObjectId,
           ref: 'user_credentials',
         },
-        file: [],
+        startBuildingFile: [],
       },
       {
         timestamps: true,

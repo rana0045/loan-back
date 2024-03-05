@@ -48,7 +48,7 @@ export namespace OneValidation {
         proofOfAddress1: z.custom<File>(),
         socialSecurityCard1: z.custom<File>(),
         identityCard2: z.custom<File>(),
-        proofOfAddress2: z.custom<File>(),
+        // proofOfAddress2: z.custom<File>(),
         socialSecurityCard2: z.custom<File>(),
       })
       .strict(),

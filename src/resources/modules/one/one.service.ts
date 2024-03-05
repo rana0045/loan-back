@@ -255,9 +255,9 @@ export namespace OneService {
       const identityCardArray1 = fileUploads?.identityCard1?.map(
         (file) => file,
       );
-      const proofOfAddressArray2 = fileUploads?.proofOfAddress2?.map(
-        (file) => file,
-      );
+      // const proofOfAddressArray2 = fileUploads?.proofOfAddress2?.map(
+      //   (file) => file,
+      // );
       const socialSecurityCardArray2 = fileUploads?.socialSecurityCard2?.map(
         (file) => file,
       );
@@ -293,10 +293,10 @@ export namespace OneService {
           ),
           socialSecurityCardArray2?.map((file) => file?.filename as string),
         );
-        await deleteFilesForIdentity(
-          oldUserData.proofOfAddress2?.map((file) => file?.filename as string),
-          proofOfAddressArray2?.map((file) => file?.filename as string),
-        );
+        // await deleteFilesForIdentity(
+        //   oldUserData.proofOfAddress2?.map((file) => file?.filename as string),
+        //   proofOfAddressArray2?.map((file) => file?.filename as string),
+        // );
       }
 
       const updatedUser =
@@ -309,7 +309,7 @@ export namespace OneService {
               proofOfAddress1: proofOfAddressArray1,
               identityCard2: identityCardArray2,
               socialSecurityCard2: socialSecurityCardArray2,
-              proofOfAddress2: proofOfAddressArray2,
+              // proofOfAddress2: proofOfAddressArray2,
             },
           },
           { new: true },

@@ -81,4 +81,190 @@ export var BusinessController;
             next(e);
         }
     };
+    BusinessController.EmailDetails = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.EmailDetails(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetEmailDetails = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.GetEmailDetails(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.License = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.License(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetLicense = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.GetLicense(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.BankAccount = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.BankAccount(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetBankAccount = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.GetBankAccount(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.MerchantBankAccount = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.MerchantBankAccount(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetMerchantBankAccount = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.GetMerchantBankAccount(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.Duns = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.Duns(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetDuns = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.GetDuns(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.Experian = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.Experian(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetExperian = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.GetExperian(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.Equifax = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.Equifax(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetEquifax = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.GetEquifax(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuilding = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.StartBuilding(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetStartBuilding = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.GetStartBuilding(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.EinFile = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.EinFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.MonitorDunsFile = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.MonitorDunsFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.MonitorExperianFile = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.MonitorExperianFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.MonitorEquifaxFile = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.MonitorEquifaxFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.LexisFile = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.LexisFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.ChexSystemFile = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.ChexSystemFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuildingFile = async (req, res, next) => {
+        try {
+            res.status(201).json(await BusinessService.StartBuildingFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
 })(BusinessController = BusinessController || (BusinessController = {}));
