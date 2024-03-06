@@ -57,7 +57,16 @@ const moduleOneSignUpParts = async (req, Credentials) => {
         const newChexSystemFile = new BusinessModel.ChexSystemFileModel({
             user_id: Credentials._id,
         });
-        const newStartBuildingFile = new BusinessModel.StartBuildingFileModel({
+        const newStartBuildingTierOneFile = new BusinessModel.StartBuildingTierOneFileModel({
+            user_id: Credentials._id,
+        });
+        const newStartBuildingTierTwoFile = new BusinessModel.StartBuildingTierTwoFileModel({
+            user_id: Credentials._id,
+        });
+        const newStartBuildingTierThreeFile = new BusinessModel.StartBuildingTierThreeFileModel({
+            user_id: Credentials._id,
+        });
+        const newStartBuildingTierFourFile = new BusinessModel.StartBuildingTierFourFileModel({
             user_id: Credentials._id,
         });
         const userAddress = await newUserAddress.save();
@@ -70,7 +79,10 @@ const moduleOneSignUpParts = async (req, Credentials) => {
         const monitorEquifaxFile = await newMonitorEquifaxFile.save();
         const lexisFile = await newLexisFile.save();
         const chexSystemFile = await newChexSystemFile.save();
-        const startBuildingFile = await newStartBuildingFile.save();
+        const startBuildingTierOneFile = await newStartBuildingTierOneFile.save();
+        const startBuildingTierTwoFile = await newStartBuildingTierTwoFile.save();
+        const startBuildingTierThreeFile = await newStartBuildingTierThreeFile.save();
+        const startBuildingTierFourFile = await newStartBuildingTierFourFile.save();
         console.log('User Address saved:', userAddress);
         console.log('User Details saved:', userDetails);
         console.log('User Individual Identity saved:', individualIdentity);

@@ -343,8 +343,8 @@ export namespace BusinessSchema {
         versionKey: false,
       },
     );
-  export const StartBuildingSchema =
-    new mongoose.Schema<Business.StartBuilding>(
+  export const StartBuildingTierOneSchema =
+    new mongoose.Schema<Business.StartBuildingTierOne>(
       {
         user_id: {
           type: Types.ObjectId,
@@ -376,14 +376,155 @@ export namespace BusinessSchema {
         versionKey: false,
       },
     );
-  export const StartBuildingFileSchema =
-    new mongoose.Schema<Business.StartBuildingFile>(
+  export const StartBuildingTierOneFileSchema =
+    new mongoose.Schema<Business.StartBuildingTierOneFile>(
       {
         user_id: {
           type: Types.ObjectId,
           ref: 'user_credentials',
         },
-        startBuildingFile: [],
+        startBuildingTierOneFile: [],
+      },
+      {
+        timestamps: true,
+        versionKey: false,
+      },
+    );
+    export const StartBuildingTierTwoSchema =
+    new mongoose.Schema<Business.StartBuildingTierTwo>(
+      {
+        user_id: {
+          type: Types.ObjectId,
+          ref: 'user_credentials',
+        },
+        tradeAccount: {
+          type: String,
+          default: null,
+        },
+        appliedDate: {
+          type: String,
+          default: null,
+        },
+        paymentDate: {
+          type: String,
+          default: null,
+        },
+        approvedAmount: {
+          type: String,
+          default: null,
+        },
+        personalGrant: {
+          type: String,
+          default: null,
+        },
+      },
+      {
+        timestamps: true,
+        versionKey: false,
+      },
+    );
+  export const StartBuildingTierTwoFileSchema =
+    new mongoose.Schema<Business.StartBuildingTierTwoFile>(
+      {
+        user_id: {
+          type: Types.ObjectId,
+          ref: 'user_credentials',
+        },
+        startBuildingTierTwoFile: [],
+      },
+      {
+        timestamps: true,
+        versionKey: false,
+      },
+    );
+    export const StartBuildingTierThreeSchema =
+    new mongoose.Schema<Business.StartBuildingTierThree>(
+      {
+        user_id: {
+          type: Types.ObjectId,
+          ref: 'user_credentials',
+        },
+        tradeAccount: {
+          type: String,
+          default: null,
+        },
+        appliedDate: {
+          type: String,
+          default: null,
+        },
+        paymentDate: {
+          type: String,
+          default: null,
+        },
+        approvedAmount: {
+          type: String,
+          default: null,
+        },
+        personalGrant: {
+          type: String,
+          default: null,
+        },
+      },
+      {
+        timestamps: true,
+        versionKey: false,
+      },
+    );
+  export const StartBuildingTierThreeFileSchema =
+    new mongoose.Schema<Business.StartBuildingTierThreeFile>(
+      {
+        user_id: {
+          type: Types.ObjectId,
+          ref: 'user_credentials',
+        },
+        startBuildingTierThreeFile: [],
+      },
+      {
+        timestamps: true,
+        versionKey: false,
+      },
+    );
+    export const StartBuildingTierFourSchema =
+    new mongoose.Schema<Business.StartBuildingTierFour>(
+      {
+        user_id: {
+          type: Types.ObjectId,
+          ref: 'user_credentials',
+        },
+        tradeAccount: {
+          type: String,
+          default: null,
+        },
+        appliedDate: {
+          type: String,
+          default: null,
+        },
+        paymentDate: {
+          type: String,
+          default: null,
+        },
+        approvedAmount: {
+          type: String,
+          default: null,
+        },
+        personalGrant: {
+          type: String,
+          default: null,
+        },
+      },
+      {
+        timestamps: true,
+        versionKey: false,
+      },
+    );
+  export const StartBuildingTierFourFileSchema =
+    new mongoose.Schema<Business.StartBuildingTierFourFile>(
+      {
+        user_id: {
+          type: Types.ObjectId,
+          ref: 'user_credentials',
+        },
+        startBuildingTierFourFile: [],
       },
       {
         timestamps: true,

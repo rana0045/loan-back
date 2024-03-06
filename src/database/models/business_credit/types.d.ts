@@ -166,7 +166,7 @@ export namespace Business {
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
-  export interface StartBuilding {
+  export interface StartBuildingTierOne {
     _id: TString;
     user_id: TUser;
     tradeAccount: TString;
@@ -177,10 +177,64 @@ export namespace Business {
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }
-  export interface StartBuildingFile {
+  export interface StartBuildingTierOneFile {
     _id: TString;
     user_id: TUser;
-    startBuildingFile: [TFileInfo];
+    startBuildingTierOneFile: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuildingTierTwo {
+    _id: TString;
+    user_id: TUser;
+    tradeAccount: TString;
+    appliedDate: TString;
+    paymentDate: TString;
+    approvedAmount: TString;
+    personalGrant: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuildingTierTwoFile {
+    _id: TString;
+    user_id: TUser;
+    startBuildingTierTwoFile: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuildingTierThree {
+    _id: TString;
+    user_id: TUser;
+    tradeAccount: TString;
+    appliedDate: TString;
+    paymentDate: TString;
+    approvedAmount: TString;
+    personalGrant: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuildingTierThreeFile {
+    _id: TString;
+    user_id: TUser;
+    startBuildingTierThreeFile: [TFileInfo];
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuildingTierFour {
+    _id: TString;
+    user_id: TUser;
+    tradeAccount: TString;
+    appliedDate: TString;
+    paymentDate: TString;
+    approvedAmount: TString;
+    personalGrant: TString;
+    createdAt?: boolean | string;
+    updatedAt?: boolean | string;
+  }
+  export interface StartBuildingTierFourFile {
+    _id: TString;
+    user_id: TUser;
+    startBuildingTierFourFile: [TFileInfo];
     createdAt?: boolean | string;
     updatedAt?: boolean | string;
   }

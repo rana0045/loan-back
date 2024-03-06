@@ -283,7 +283,7 @@ export var BusinessSchema;
         timestamps: true,
         versionKey: false,
     });
-    BusinessSchema.StartBuildingSchema = new mongoose.Schema({
+    BusinessSchema.StartBuildingTierOneSchema = new mongoose.Schema({
         user_id: {
             type: Types.ObjectId,
             ref: 'user_credentials',
@@ -312,12 +312,129 @@ export var BusinessSchema;
         timestamps: true,
         versionKey: false,
     });
-    BusinessSchema.StartBuildingFileSchema = new mongoose.Schema({
+    BusinessSchema.StartBuildingTierOneFileSchema = new mongoose.Schema({
         user_id: {
             type: Types.ObjectId,
             ref: 'user_credentials',
         },
-        startBuildingFile: [],
+        startBuildingTierOneFile: [],
+    }, {
+        timestamps: true,
+        versionKey: false,
+    });
+    BusinessSchema.StartBuildingTierTwoSchema = new mongoose.Schema({
+        user_id: {
+            type: Types.ObjectId,
+            ref: 'user_credentials',
+        },
+        tradeAccount: {
+            type: String,
+            default: null,
+        },
+        appliedDate: {
+            type: String,
+            default: null,
+        },
+        paymentDate: {
+            type: String,
+            default: null,
+        },
+        approvedAmount: {
+            type: String,
+            default: null,
+        },
+        personalGrant: {
+            type: String,
+            default: null,
+        },
+    }, {
+        timestamps: true,
+        versionKey: false,
+    });
+    BusinessSchema.StartBuildingTierTwoFileSchema = new mongoose.Schema({
+        user_id: {
+            type: Types.ObjectId,
+            ref: 'user_credentials',
+        },
+        startBuildingTierTwoFile: [],
+    }, {
+        timestamps: true,
+        versionKey: false,
+    });
+    BusinessSchema.StartBuildingTierThreeSchema = new mongoose.Schema({
+        user_id: {
+            type: Types.ObjectId,
+            ref: 'user_credentials',
+        },
+        tradeAccount: {
+            type: String,
+            default: null,
+        },
+        appliedDate: {
+            type: String,
+            default: null,
+        },
+        paymentDate: {
+            type: String,
+            default: null,
+        },
+        approvedAmount: {
+            type: String,
+            default: null,
+        },
+        personalGrant: {
+            type: String,
+            default: null,
+        },
+    }, {
+        timestamps: true,
+        versionKey: false,
+    });
+    BusinessSchema.StartBuildingTierThreeFileSchema = new mongoose.Schema({
+        user_id: {
+            type: Types.ObjectId,
+            ref: 'user_credentials',
+        },
+        startBuildingTierThreeFile: [],
+    }, {
+        timestamps: true,
+        versionKey: false,
+    });
+    BusinessSchema.StartBuildingTierFourSchema = new mongoose.Schema({
+        user_id: {
+            type: Types.ObjectId,
+            ref: 'user_credentials',
+        },
+        tradeAccount: {
+            type: String,
+            default: null,
+        },
+        appliedDate: {
+            type: String,
+            default: null,
+        },
+        paymentDate: {
+            type: String,
+            default: null,
+        },
+        approvedAmount: {
+            type: String,
+            default: null,
+        },
+        personalGrant: {
+            type: String,
+            default: null,
+        },
+    }, {
+        timestamps: true,
+        versionKey: false,
+    });
+    BusinessSchema.StartBuildingTierFourFileSchema = new mongoose.Schema({
+        user_id: {
+            type: Types.ObjectId,
+            ref: 'user_credentials',
+        },
+        startBuildingTierFourFile: [],
     }, {
         timestamps: true,
         versionKey: false,

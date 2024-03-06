@@ -38,8 +38,30 @@ export namespace BusinessRoutes {
   index.get('/business/experian', [BusinessController.GetExperian]);
   index.post('/business/equifax', [BusinessController.Equifax]);
   index.get('/business/equifax', [BusinessController.GetEquifax]);
-  index.post('/business/start.building', [BusinessController.StartBuilding]);
-  index.get('/business/start.building', [BusinessController.GetStartBuilding]);
+  index.post('/business/start.building/tier.one', [
+    BusinessController.StartBuildingTierOne,
+  ]);
+  index.get('/business/start.building/tier.one', [
+    BusinessController.GetStartBuildingTierOne,
+  ]);
+  index.post('/business/start.building/tier.two', [
+    BusinessController.StartBuildingTierTwo,
+  ]);
+  index.get('/business/start.building/tier.two', [
+    BusinessController.GetStartBuildingTierTwo,
+  ]);
+  index.post('/business/start.building/tier.three', [
+    BusinessController.StartBuildingTierThree,
+  ]);
+  index.get('/business/start.building/tier.three', [
+    BusinessController.GetStartBuildingTierThree,
+  ]);
+  index.post('/business/start.building/tier.four', [
+    BusinessController.StartBuildingTierFour,
+  ]);
+  index.get('/business/start.building/tier.four', [
+    BusinessController.GetStartBuildingTierFour,
+  ]);
   index.post('/business/ein.file', [
     OneUpload.fields([{ name: 'einFile', maxCount: 1 }]),
     BusinessController.EinFile,
@@ -64,8 +86,20 @@ export namespace BusinessRoutes {
     OneUpload.fields([{ name: 'chexSystemFile', maxCount: 1 }]),
     BusinessController.ChexSystemFile,
   ]);
-  index.post('/business/start.building.file', [
-    OneUpload.fields([{ name: 'startBuildingFile', maxCount: 1 }]),
-    BusinessController.StartBuildingFile,
+  index.post('/business/start.building/tier.one.file', [
+    OneUpload.fields([{ name: 'startBuildingTierOneFile', maxCount: 1 }]),
+    BusinessController.StartBuildingTierOneFile,
+  ]);
+  index.post('/business/start.building/tier.two.file', [
+    OneUpload.fields([{ name: 'startBuildingTierTwoFile', maxCount: 1 }]),
+    BusinessController.StartBuildingTierTwoFile,
+  ]);
+  index.post('/business/start.building/tier.three.file', [
+    OneUpload.fields([{ name: 'startBuildingTierThreeFile', maxCount: 1 }]),
+    BusinessController.StartBuildingTierThreeFile,
+  ]);
+  index.post('/business/start.building/tier.four.file', [
+    OneUpload.fields([{ name: 'startBuildingTierFourFile', maxCount: 1 }]),
+    BusinessController.StartBuildingTierFourFile,
   ]);
 }

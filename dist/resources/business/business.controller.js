@@ -195,17 +195,81 @@ export var BusinessController;
             next(e);
         }
     };
-    BusinessController.StartBuilding = async (req, res, next) => {
+    BusinessController.StartBuildingTierOne = async (req, res, next) => {
         try {
-            res.status(201).json(await BusinessService.StartBuilding(req, res));
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierOne(req, res));
         }
         catch (e) {
             next(e);
         }
     };
-    BusinessController.GetStartBuilding = async (req, res, next) => {
+    BusinessController.GetStartBuildingTierOne = async (req, res, next) => {
         try {
-            res.status(201).json(await BusinessService.GetStartBuilding(req, res));
+            res
+                .status(201)
+                .json(await BusinessService.GetStartBuildingTierOne(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuildingTierTwo = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierTwo(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetStartBuildingTierTwo = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.GetStartBuildingTierTwo(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuildingTierThree = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierThree(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetStartBuildingTierThree = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.GetStartBuildingTierThree(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuildingTierFour = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierFour(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.GetStartBuildingTierFour = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.GetStartBuildingTierFour(req, res));
         }
         catch (e) {
             next(e);
@@ -259,9 +323,41 @@ export var BusinessController;
             next(e);
         }
     };
-    BusinessController.StartBuildingFile = async (req, res, next) => {
+    BusinessController.StartBuildingTierOneFile = async (req, res, next) => {
         try {
-            res.status(201).json(await BusinessService.StartBuildingFile(req, res));
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierOneFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuildingTierTwoFile = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierTwoFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuildingTierThreeFile = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierThreeFile(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+    BusinessController.StartBuildingTierFourFile = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.StartBuildingTierFourFile(req, res));
         }
         catch (e) {
             next(e);

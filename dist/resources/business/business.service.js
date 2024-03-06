@@ -570,11 +570,11 @@ export var BusinessService;
             });
         }
     };
-    BusinessService.StartBuilding = async (req, res) => {
+    BusinessService.StartBuildingTierOne = async (req, res) => {
         try {
             const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
             const userId = res.locals.decode._id;
-            const newBankDetails = new BusinessModel.StartBuildingModel({
+            const newStartBuildingTierOne = new BusinessModel.StartBuildingTierOneModel({
                 user_id: userId,
                 tradeAccount,
                 appliedDate,
@@ -582,11 +582,11 @@ export var BusinessService;
                 approvedAmount,
                 personalGrant,
             });
-            await newBankDetails.save();
+            await newStartBuildingTierOne.save();
             return Promise.resolve({
                 code: 200,
                 Success: true,
-                message: 'StartBuilding Details saved successfully',
+                message: 'StartBuildingTierOne Details saved successfully',
             });
         }
         catch (e) {
@@ -598,17 +598,167 @@ export var BusinessService;
             });
         }
     };
-    BusinessService.GetStartBuilding = async (req, res) => {
+    BusinessService.GetStartBuildingTierOne = async (req, res) => {
         try {
             const userId = res.locals.decode._id;
-            const phoneDetails = await BusinessModel.StartBuildingModel.findOne({
+            const details = await BusinessModel.StartBuildingTierOneModel.findOne({
                 user_id: userId,
             });
             return Promise.resolve({
                 code: 200,
                 Success: true,
-                message: 'StartBuilding Details get successfully',
-                data: phoneDetails,
+                message: 'StartBuildingTierOne Details get successfully',
+                data: details,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuildingTierTwo = async (req, res) => {
+        try {
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
+            const userId = res.locals.decode._id;
+            const newStartBuildingTierTwo = new BusinessModel.StartBuildingTierTwoModel({
+                user_id: userId,
+                tradeAccount,
+                appliedDate,
+                paymentDate,
+                approvedAmount,
+                personalGrant,
+            });
+            await newStartBuildingTierTwo.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuildingTierTwo Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetStartBuildingTierTwo = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const details = await BusinessModel.StartBuildingTierTwoModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuildingTierTwo Details get successfully',
+                data: details,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuildingTierThree = async (req, res) => {
+        try {
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
+            const userId = res.locals.decode._id;
+            const newStartBuildingTierThree = new BusinessModel.StartBuildingTierThreeModel({
+                user_id: userId,
+                tradeAccount,
+                appliedDate,
+                paymentDate,
+                approvedAmount,
+                personalGrant,
+            });
+            await newStartBuildingTierThree.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuildingTierThree Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetStartBuildingTierThree = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const details = await BusinessModel.StartBuildingTierThreeModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuildingTierThree Details get successfully',
+                data: details,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuildingTierFour = async (req, res) => {
+        try {
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
+            const userId = res.locals.decode._id;
+            const newStartBuildingTierFour = new BusinessModel.StartBuildingTierFourModel({
+                user_id: userId,
+                tradeAccount,
+                appliedDate,
+                paymentDate,
+                approvedAmount,
+                personalGrant,
+            });
+            await newStartBuildingTierFour.save();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuildingTierFour Details saved successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.GetStartBuildingTierFour = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            const details = await BusinessModel.StartBuildingTierFourModel.findOne({
+                user_id: userId,
+            });
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'StartBuildingTierFour Details get successfully',
+                data: details,
             });
         }
         catch (e) {
@@ -902,7 +1052,7 @@ export var BusinessService;
             });
         }
     };
-    BusinessService.StartBuildingFile = async (req, res) => {
+    BusinessService.StartBuildingTierOneFile = async (req, res) => {
         try {
             const fileUploads = req.files;
             if (!fileUploads || !Object.keys(fileUploads).length) {
@@ -914,17 +1064,158 @@ export var BusinessService;
                     },
                 });
             }
-            const startBuildingFile = [...fileUploads?.startBuildingFile];
+            const startBuildingTierOneFile = [...fileUploads?.startBuildingTierOneFile];
             const userId = res.locals.decode._id;
-            const oldUserData = await BusinessModel.StartBuildingFileModel.findOne({
+            const oldUserData = await BusinessModel.StartBuildingTierOneFileModel.findOne({
                 user_id: userId,
             });
             if (oldUserData) {
-                await deleteFilesForIdentity(oldUserData?.startBuildingFile?.map((file) => file?.filename), startBuildingFile?.map((file) => file?.filename));
+                await deleteFilesForIdentity(oldUserData?.startBuildingTierOneFile?.map((file) => file?.filename), startBuildingTierOneFile?.map((file) => file?.filename));
             }
-            const updatedUser = await BusinessModel.StartBuildingFileModel.findOneAndUpdate({ user_id: userId }, {
+            const updatedUser = await BusinessModel.StartBuildingTierOneFileModel.findOneAndUpdate({ user_id: userId }, {
                 $set: {
-                    startBuildingFile: startBuildingFile,
+                    startBuildingTierOneFile: startBuildingTierOneFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuildingTierTwoFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const startBuildingTierTwoFile = [...fileUploads?.startBuildingTierTwoFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.StartBuildingTierTwoFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.startBuildingTierTwoFile?.map((file) => file?.filename), startBuildingTierTwoFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.StartBuildingTierTwoFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    startBuildingTierTwoFile: startBuildingTierTwoFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuildingTierThreeFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const startBuildingTierThreeFile = [...fileUploads?.startBuildingTierThreeFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.StartBuildingTierThreeFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.startBuildingTierThreeFile?.map((file) => file?.filename), startBuildingTierThreeFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.StartBuildingTierThreeFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    startBuildingTierThreeFile: startBuildingTierThreeFile,
+                },
+            }, { new: true });
+            if (!updatedUser) {
+                return Promise.reject({
+                    code: 404,
+                    Success: false,
+                    message: 'User not found',
+                });
+            }
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'File uploaded successfully',
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+    BusinessService.StartBuildingTierFourFile = async (req, res) => {
+        try {
+            const fileUploads = req.files;
+            if (!fileUploads || !Object.keys(fileUploads).length) {
+                return Promise.reject({
+                    success: false,
+                    error: {
+                        code: 400,
+                        message: 'No files were provided in the request.',
+                    },
+                });
+            }
+            const startBuildingTierFourFile = [...fileUploads?.startBuildingTierFourFile];
+            const userId = res.locals.decode._id;
+            const oldUserData = await BusinessModel.StartBuildingTierFourFileModel.findOne({
+                user_id: userId,
+            });
+            if (oldUserData) {
+                await deleteFilesForIdentity(oldUserData?.startBuildingTierFourFile?.map((file) => file?.filename), startBuildingTierFourFile?.map((file) => file?.filename));
+            }
+            const updatedUser = await BusinessModel.StartBuildingTierFourFileModel.findOneAndUpdate({ user_id: userId }, {
+                $set: {
+                    startBuildingTierFourFile: startBuildingTierFourFile,
                 },
             }, { new: true });
             if (!updatedUser) {

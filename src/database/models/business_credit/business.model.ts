@@ -77,13 +77,40 @@ export namespace BusinessModel {
     'business_chex_system_file',
     BusinessSchema.ChexSystemFileSchema,
   );
-  export const StartBuildingModel = mongoose.model<Business.StartBuilding>(
-    'business_start_building',
-    BusinessSchema.StartBuildingSchema,
+  export const StartBuildingTierOneModel = mongoose.model<Business.StartBuildingTierOne>(
+    'business_start_building_tier_one',
+    BusinessSchema.StartBuildingTierOneSchema,
   );
-  export const StartBuildingFileModel =
-    mongoose.model<Business.StartBuildingFile>(
-      'business_start_building_file',
-      BusinessSchema.StartBuildingFileSchema,
+  export const StartBuildingTierOneFileModel =
+    mongoose.model<Business.StartBuildingTierOneFile>(
+      'business_start_building_tier_one_file',
+      BusinessSchema.StartBuildingTierOneFileSchema,
     );
+    export const StartBuildingTierTwoModel = mongoose.model<Business.StartBuildingTierTwo>(
+      'business_start_building_tier_two',
+      BusinessSchema.StartBuildingTierTwoSchema,
+    );
+    export const StartBuildingTierTwoFileModel =
+      mongoose.model<Business.StartBuildingTierTwoFile>(
+        'business_start_building_tier_two_file',
+        BusinessSchema.StartBuildingTierTwoFileSchema,
+      );
+      export const StartBuildingTierThreeModel = mongoose.model<Business.StartBuildingTierThree>(
+        'business_start_building_tier_three',
+        BusinessSchema.StartBuildingTierThreeSchema,
+      );
+      export const StartBuildingTierThreeFileModel =
+        mongoose.model<Business.StartBuildingTierThreeFile>(
+          'business_start_building_tier_three_file',
+          BusinessSchema.StartBuildingTierThreeFileSchema,
+        );
+        export const StartBuildingTierFourModel = mongoose.model<Business.StartBuildingTierFour>(
+          'business_start_building_tier_four',
+          BusinessSchema.StartBuildingTierFourSchema,
+        );
+        export const StartBuildingTierFourFileModel =
+          mongoose.model<Business.StartBuildingTierFourFile>(
+            'business_start_building_tier_four_file',
+            BusinessSchema.StartBuildingTierFourFileSchema,
+          );
 }

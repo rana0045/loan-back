@@ -34,8 +34,30 @@ export var BusinessRoutes;
     BusinessRoutes.index.get('/business/experian', [BusinessController.GetExperian]);
     BusinessRoutes.index.post('/business/equifax', [BusinessController.Equifax]);
     BusinessRoutes.index.get('/business/equifax', [BusinessController.GetEquifax]);
-    BusinessRoutes.index.post('/business/start.building', [BusinessController.StartBuilding]);
-    BusinessRoutes.index.get('/business/start.building', [BusinessController.GetStartBuilding]);
+    BusinessRoutes.index.post('/business/start.building/tier.one', [
+        BusinessController.StartBuildingTierOne,
+    ]);
+    BusinessRoutes.index.get('/business/start.building/tier.one', [
+        BusinessController.GetStartBuildingTierOne,
+    ]);
+    BusinessRoutes.index.post('/business/start.building/tier.two', [
+        BusinessController.StartBuildingTierTwo,
+    ]);
+    BusinessRoutes.index.get('/business/start.building/tier.two', [
+        BusinessController.GetStartBuildingTierTwo,
+    ]);
+    BusinessRoutes.index.post('/business/start.building/tier.three', [
+        BusinessController.StartBuildingTierThree,
+    ]);
+    BusinessRoutes.index.get('/business/start.building/tier.three', [
+        BusinessController.GetStartBuildingTierThree,
+    ]);
+    BusinessRoutes.index.post('/business/start.building/tier.four', [
+        BusinessController.StartBuildingTierFour,
+    ]);
+    BusinessRoutes.index.get('/business/start.building/tier.four', [
+        BusinessController.GetStartBuildingTierFour,
+    ]);
     BusinessRoutes.index.post('/business/ein.file', [
         OneUpload.fields([{ name: 'einFile', maxCount: 1 }]),
         BusinessController.EinFile,
@@ -60,8 +82,20 @@ export var BusinessRoutes;
         OneUpload.fields([{ name: 'chexSystemFile', maxCount: 1 }]),
         BusinessController.ChexSystemFile,
     ]);
-    BusinessRoutes.index.post('/business/start.building.file', [
-        OneUpload.fields([{ name: 'startBuildingFile', maxCount: 1 }]),
-        BusinessController.StartBuildingFile,
+    BusinessRoutes.index.post('/business/start.building/tier.one.file', [
+        OneUpload.fields([{ name: 'startBuildingTierOneFile', maxCount: 1 }]),
+        BusinessController.StartBuildingTierOneFile,
+    ]);
+    BusinessRoutes.index.post('/business/start.building/tier.two.file', [
+        OneUpload.fields([{ name: 'startBuildingTierTwoFile', maxCount: 1 }]),
+        BusinessController.StartBuildingTierTwoFile,
+    ]);
+    BusinessRoutes.index.post('/business/start.building/tier.three.file', [
+        OneUpload.fields([{ name: 'startBuildingTierThreeFile', maxCount: 1 }]),
+        BusinessController.StartBuildingTierThreeFile,
+    ]);
+    BusinessRoutes.index.post('/business/start.building/tier.four.file', [
+        OneUpload.fields([{ name: 'startBuildingTierFourFile', maxCount: 1 }]),
+        BusinessController.StartBuildingTierFourFile,
     ]);
 })(BusinessRoutes = BusinessRoutes || (BusinessRoutes = {}));

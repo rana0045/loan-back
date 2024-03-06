@@ -268,24 +268,106 @@ export namespace BusinessController {
       next(e);
     }
   };
-  export const StartBuilding = async (
+  export const StartBuildingTierOne = async (
     req: Request,
     res: Response,
     next: NextFunction,
   ) => {
     try {
-      res.status(201).json(await BusinessService.StartBuilding(req, res));
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierOne(req, res));
     } catch (e) {
       next(e);
     }
   };
-  export const GetStartBuilding = async (
+  export const GetStartBuildingTierOne = async (
     req: Request,
     res: Response,
     next: NextFunction,
   ) => {
     try {
-      res.status(201).json(await BusinessService.GetStartBuilding(req, res));
+      res
+        .status(201)
+        .json(await BusinessService.GetStartBuildingTierOne(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const StartBuildingTierTwo = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierTwo(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const GetStartBuildingTierTwo = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.GetStartBuildingTierTwo(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const StartBuildingTierThree = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierThree(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const GetStartBuildingTierThree = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.GetStartBuildingTierThree(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const StartBuildingTierFour = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierFour(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const GetStartBuildingTierFour = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.GetStartBuildingTierFour(req, res));
     } catch (e) {
       next(e);
     }
@@ -357,13 +439,54 @@ export namespace BusinessController {
       next(e);
     }
   };
-  export const StartBuildingFile = async (
+  export const StartBuildingTierOneFile = async (
     req: Request,
     res: Response,
     next: NextFunction,
   ) => {
     try {
-      res.status(201).json(await BusinessService.StartBuildingFile(req, res));
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierOneFile(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const StartBuildingTierTwoFile = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierTwoFile(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const StartBuildingTierThreeFile = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierThreeFile(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+  export const StartBuildingTierFourFile = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.StartBuildingTierFourFile(req, res));
     } catch (e) {
       next(e);
     }
