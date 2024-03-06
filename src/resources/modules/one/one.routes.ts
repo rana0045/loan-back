@@ -24,14 +24,13 @@ export namespace OneRoutes {
     [validateRequest(OneValidation.SignUp)],
     OneController.SignUp,
   );
-
+  index.get('/modules/one.plans', [OneController.Plan]);
   index.use(CheckToken);
   index.post('/modules/one.bureau_credential', [
     validateRequest(OneValidation.BureauCredential),
     OneController.BureauCredential,
   ]);
   index.post('/modules/one.meeting', [OneController.Meeting]);
-  index.get('/modules/one.plans', [OneController.Plan]);
   index.post('/modules/one.fp.account', [
     validateRequest(OneValidation.FPAccount),
     OneController.FPAccount,

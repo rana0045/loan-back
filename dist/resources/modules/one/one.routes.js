@@ -18,13 +18,13 @@ export var OneRoutes;
 (function (OneRoutes) {
     OneRoutes.index = Router();
     OneRoutes.index.post('/modules/one.sign_up', [validateRequest(OneValidation.SignUp)], OneController.SignUp);
+    OneRoutes.index.get('/modules/one.plans', [OneController.Plan]);
     OneRoutes.index.use(CheckToken);
     OneRoutes.index.post('/modules/one.bureau_credential', [
         validateRequest(OneValidation.BureauCredential),
         OneController.BureauCredential,
     ]);
     OneRoutes.index.post('/modules/one.meeting', [OneController.Meeting]);
-    OneRoutes.index.get('/modules/one.plans', [OneController.Plan]);
     OneRoutes.index.post('/modules/one.fp.account', [
         validateRequest(OneValidation.FPAccount),
         OneController.FPAccount,
