@@ -212,6 +212,7 @@ export namespace OneService {
         },
         {
           $sort: {
+            'position': 1,
             'pricing.emiPrice': -1,
           },
         },

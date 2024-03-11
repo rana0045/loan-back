@@ -10,7 +10,7 @@
  ******************************************************************************/
 
 export namespace Package {
-  export type TString = string | null | undefined | number;
+  export type TString = string | null | undefined | number | mongoose.Types.Decimal128;
   export type TStatus = string | null | undefined | '0' | '1' | '2';
   export type TIntervalType = 'day' | 'month' | 'week' | 'year';
   export type TBulletPoints = {

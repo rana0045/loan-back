@@ -10,7 +10,7 @@
  ******************************************************************************/
 import mongoose from 'mongoose';
 import { Package } from './types.js';
-
+import { Decimal128 } from 'mongodb';
 export namespace PackageSchema {
   const bulletPointSchema = new mongoose.Schema({
     value: {
@@ -25,11 +25,11 @@ export namespace PackageSchema {
 
   const pricingSchema = new mongoose.Schema({
     fullPrice: {
-      type: Number,
+      type: Decimal128,
       default: null,
     },
     emiPrice: {
-      type: Number,
+      type: Decimal128,
       default: null,
     },
     intervalType: {
