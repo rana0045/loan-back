@@ -110,49 +110,48 @@ export namespace OneService {
   export const BureauCredential = async (req: Request, res: Response) => {
     try {
       const { provider, username, phone, password, notes } = req.body;
-      const userId = res?.locals?._id;
+      const userId = res.locals.decode._id;
 
-      const existingBureauCredential =
-        await UserModel.BureauCredentialModel.findOne({
+      const updateUser = await UserModel.BureauCredentialModel.findOneAndUpdate(
+        { user_id: userId },
+        {
+          $set: {
+            provider: provider,
+            username: username,
+            phone: phone,
+            password: password,
+            notes: notes,
+          },
+        },
+        { new: true },
+      );
+      if (!updateUser) {
+        const newBureauCredential = new UserModel.BureauCredentialModel({
           user_id: userId,
           provider: provider,
+          username: username,
+          phone: phone,
+          password: password,
+          notes: notes,
         });
 
-      if (existingBureauCredential) {
-        existingBureauCredential.username = username;
-        existingBureauCredential.phone = phone;
-        existingBureauCredential.password = password;
-        existingBureauCredential.notes = notes;
-
-        await existingBureauCredential.save();
+        await newBureauCredential.save();
 
         return Promise.resolve({
           code: 200,
           Success: true,
-          message: 'Bureau Credential updated successfully',
+          message: 'Bureau Credential saved successfully',
           urlPath: '/onboarding/pcr/meeting',
         });
       }
-
-      const newBureauCredential = new UserModel.BureauCredentialModel({
-        user_id: userId,
-        provider: provider,
-        username: username,
-        phone: phone,
-        password: password,
-        notes: notes,
-      });
-
-      const savedBureauCredential = await newBureauCredential.save();
-
       return Promise.resolve({
         code: 200,
         Success: true,
-        message: 'Bureau Credential saved successfully',
+        message: 'Bureau Credential updated successfully',
         urlPath: '/onboarding/pcr/meeting',
       });
+    
     } catch (e) {
-      // Handle errors and reject the promise
       console.error('Error:', e);
       return Promise.reject({
         code: 500,

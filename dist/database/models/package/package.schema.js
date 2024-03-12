@@ -9,6 +9,7 @@
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
  ******************************************************************************/
 import mongoose from 'mongoose';
+import { Decimal128 } from 'mongodb';
 export var PackageSchema;
 (function (PackageSchema) {
     const bulletPointSchema = new mongoose.Schema({
@@ -23,11 +24,11 @@ export var PackageSchema;
     });
     const pricingSchema = new mongoose.Schema({
         fullPrice: {
-            type: Number,
+            type: Decimal128,
             default: null,
         },
         emiPrice: {
-            type: Number,
+            type: Decimal128,
             default: null,
         },
         intervalType: {

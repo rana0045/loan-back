@@ -75,6 +75,10 @@ export namespace UserSchema {
           type: String,
           default: null,
         },
+        notes: {
+          type: String,
+          default: null,
+        },
       },
       {
         timestamps: true,
