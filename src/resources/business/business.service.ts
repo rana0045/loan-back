@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { deleteFilesForIdentity } from '../../utils/delete/delete.utils.js';
 import { Business } from '../../database/models/business_credit/types.js';
 import { BusinessModel } from '../../database/models/business_credit/business.model.js';
+import { UserModel } from '../../database/models/user/user.model.js';
 
 export namespace BusinessService {
   export const Name = async (req: Request, res: Response) => {
@@ -1343,6 +1344,29 @@ export namespace BusinessService {
         code: 200,
         Success: true,
         message: 'File uploaded successfully',
+      });
+    } catch (e) {
+      console.error('Error:', e);
+      return Promise.reject({
+        code: 500,
+        Success: false,
+        message: 'Internal Server Error',
+      });
+    }
+  };
+
+  export const GetAllUsers = async (req: Request, res: Response) => {
+    try {
+      const userId = res.locals.decode._id;
+      // const details = await  UserModel.IndividualDetailsModel.find({});
+      // const details2 = await  UserModel.CredentialModel.find({}, { password: 0 });
+
+      const userDetailsWithCredentials = await UserModel.IndividualDetailsModel.find({}).populate('user_id', '-password').exec();
+      return Promise.resolve({
+        code: 200,
+        Success: true,
+        message: 'get successfully',
+        data: userDetailsWithCredentials,
       });
     } catch (e) {
       console.error('Error:', e);

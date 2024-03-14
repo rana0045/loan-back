@@ -491,4 +491,21 @@ export namespace BusinessController {
       next(e);
     }
   };
+
+  export const GetAllUsers = async (
+    req: Request,
+    res: Response,
+    next: NextFunction,
+  ) => {
+    try {
+      res
+        .status(201)
+        .json(await BusinessService.GetAllUsers(req, res));
+    } catch (e) {
+      next(e);
+    }
+  };
+
+
+
 }

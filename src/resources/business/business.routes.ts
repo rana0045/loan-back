@@ -8,7 +8,9 @@ import { BusinessController } from './business.controller.js';
 
 export namespace BusinessRoutes {
   export const index = Router();
-
+  index.get('/get.all.users', [
+    BusinessController.GetAllUsers,
+  ]);
   index.use(CheckToken);
   index.post('/business/name', [BusinessController.Name]);
   index.get('/business/name', [BusinessController.GetName]);
@@ -102,4 +104,5 @@ export namespace BusinessRoutes {
     OneUpload.fields([{ name: 'startBuildingTierFourFile', maxCount: 1 }]),
     BusinessController.StartBuildingTierFourFile,
   ]);
+
 }
