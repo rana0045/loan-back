@@ -22,7 +22,7 @@ import cookieParser from 'cookie-parser';
 // import { TestController } from './utils/test/test.controller.js';
 import { WebhookStripe } from './webhook/stripe/webhook.stripe.js';
 
-class MyEmitter extends EventEmitter {}
+class MyEmitter extends EventEmitter { }
 const myEmitter = new MyEmitter();
 
 // Define an event listener
@@ -48,6 +48,7 @@ class Main extends ExpressConfig {
           'http://localhost:3000/api',
           'https://loan-client.vercel.app/api',
           'http://192.168.1.4:3000/api',
+          '*'
         ],
       }),
     );
