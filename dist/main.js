@@ -39,9 +39,10 @@ class Main extends ExpressConfig {
     middlewares() {
         this.app.use(cors({
             origin: [
-                'http://localhost:3000/api',
+                'http://54.87.77.177:5000/api',
                 'https://loan-client.vercel.app/api',
                 'http://192.168.1.4:3000/api',
+                '*'
             ],
         }));
         // this.app.use(express_status_monitor());

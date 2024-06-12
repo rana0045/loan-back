@@ -23,11 +23,12 @@ export class MongooseConfig {
     const dbUri: string = process.env.DATABASEURL as string;
 
     const options: mongoose.ConnectOptions = {
-      dbName: process.env.DATABASENAME,
+      dbName: process.env.DATABASENAME || "tgi_scale_me",
     };
 
+
     try {
-      await this.mongoose.connect(dbUri, options);
+      await this.mongoose.connect("mongodb+srv://jewelcart2024:jewelcart2024@cluster0.i4uhhv8.mongodb.net/tgi_scale_me", options);
       console.log('Connected to MongoDB');
     } catch (error) {
       console.error(`MongoDB connection error: ${error}`);

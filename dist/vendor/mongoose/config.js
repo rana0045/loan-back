@@ -16,12 +16,13 @@ export class MongooseConfig {
         this.connectToDatabase().then((r) => r);
     }
     async connectToDatabase() {
-        const dbUri = process.env.DATABASEURL;
+        const dbUri = process.env.DATABASEURL || "mongodb+srv://jewelcart2024:jewelcart2024@cluster0.i4uhhv8.mongodb.net/tgi_scale_me";
         const options = {
             dbName: process.env.DATABASENAME,
         };
+        console.log(dbUri);
         try {
-            await this.mongoose.connect(dbUri, options);
+            await this.mongoose.connect(dbUri);
             console.log('Connected to MongoDB');
         }
         catch (error) {
