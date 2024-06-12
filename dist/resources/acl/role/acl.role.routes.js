@@ -17,4 +17,4 @@ export var aclRoleRoutes;
     aclRoleRoutes.index.get('/acl.role', [AclRoleController.RoleList]);
     aclRoleRoutes.index.get('/acl.role/:_id', [AclRoleController.RoleView]);
     aclRoleRoutes.index.put('/acl.role', [AclRoleController.RoleEdit]);
-})(aclRoleRoutes = aclRoleRoutes || (aclRoleRoutes = {}));
+})(aclRoleRoutes || (aclRoleRoutes = {}));

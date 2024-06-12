@@ -15,4 +15,4 @@ export var OnboardedModel;
     OnboardedModel.ModuleOneModel = mongoose.model('module_one_status', OnboardedSchema.OnboardedModuleOneSchema);
     OnboardedModel.ModuleThreeModel = mongoose.model('module_three_status', OnboardedSchema.OnboardedModuleThreeSchema);
     OnboardedModel.ModuleFourModel = mongoose.model('module_four_status', OnboardedSchema.OnboardedModuleFourSchema);
-})(OnboardedModel = OnboardedModel || (OnboardedModel = {}));
+})(OnboardedModel || (OnboardedModel = {}));

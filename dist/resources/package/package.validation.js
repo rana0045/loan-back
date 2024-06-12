@@ -74,4 +74,4 @@ export var PackageValidation;
             .strict()
             .optional(),
     };
-})(PackageValidation = PackageValidation || (PackageValidation = {}));
+})(PackageValidation || (PackageValidation = {}));

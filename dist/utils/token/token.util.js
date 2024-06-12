@@ -22,4 +22,4 @@ export var TokenUtil;
         }
         return result;
     };
-})(TokenUtil = TokenUtil || (TokenUtil = {}));
+})(TokenUtil || (TokenUtil = {}));

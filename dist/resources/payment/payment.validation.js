@@ -16,4 +16,4 @@ export var PaymentValidation;
             payment_id: z.string(),
         }),
     };
-})(PaymentValidation = PaymentValidation || (PaymentValidation = {}));
+})(PaymentValidation || (PaymentValidation = {}));

@@ -13,4 +13,4 @@ import { RoleSchema } from './role.schema.js';
 export var RoleModel;
 (function (RoleModel) {
     RoleModel.Role = mongoose.model('' + 'AclRole', RoleSchema);
-})(RoleModel = RoleModel || (RoleModel = {}));
+})(RoleModel || (RoleModel = {}));

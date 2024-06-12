@@ -24,4 +24,4 @@ export var CheckoutRoutes;
         CheckoutController.CheckOut,
     ]);
     CheckoutRoutes.index.get('/checkout.bill_details', [CheckoutController.BillingDetails]);
-})(CheckoutRoutes = CheckoutRoutes || (CheckoutRoutes = {}));
+})(CheckoutRoutes || (CheckoutRoutes = {}));

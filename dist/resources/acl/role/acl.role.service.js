@@ -35,4 +35,4 @@ export var AclRoleService;
             return Promise.reject(e);
         }
     };
-})(AclRoleService = AclRoleService || (AclRoleService = {}));
+})(AclRoleService || (AclRoleService = {}));

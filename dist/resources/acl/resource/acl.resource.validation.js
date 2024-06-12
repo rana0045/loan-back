@@ -34,4 +34,4 @@ export var AclResourceValidation;
         })
             .strict(),
     };
-})(AclResourceValidation = AclResourceValidation || (AclResourceValidation = {}));
+})(AclResourceValidation || (AclResourceValidation = {}));

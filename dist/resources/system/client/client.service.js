@@ -25,4 +25,4 @@ export var ClientService;
             });
         }
     };
-})(ClientService = ClientService || (ClientService = {}));
+})(ClientService || (ClientService = {}));

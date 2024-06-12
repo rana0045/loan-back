@@ -41,4 +41,4 @@ export var EmiSchema;
         timestamps: true,
         versionKey: false,
     });
-})(EmiSchema = EmiSchema || (EmiSchema = {}));
+})(EmiSchema || (EmiSchema = {}));

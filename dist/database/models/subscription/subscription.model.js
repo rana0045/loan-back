@@ -13,4 +13,4 @@ import { SubscriptionSchema } from './subscription.schema.js';
 export var SubscriptionModel;
 (function (SubscriptionModel) {
     SubscriptionModel.ModuleOne = mongoose.model('moduleOne_subscription', SubscriptionSchema.Schema);
-})(SubscriptionModel = SubscriptionModel || (SubscriptionModel = {}));
+})(SubscriptionModel || (SubscriptionModel = {}));

@@ -18,4 +18,4 @@ export var LeadsRoutes;
     // index.get('/system.client/:id', [PackageController.PackageUpdate]);
     // index.get('/package', [PackageController.PackageList]);
     // index.delete('/package/:id');
-})(LeadsRoutes = LeadsRoutes || (LeadsRoutes = {}));
+})(LeadsRoutes || (LeadsRoutes = {}));

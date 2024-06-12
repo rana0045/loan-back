@@ -34,4 +34,4 @@ export var PackageRoutes;
     //   validateRequest(OneValidation.docs),
     //   OneController.Docs,
     // ]);
-})(PackageRoutes = PackageRoutes || (PackageRoutes = {}));
+})(PackageRoutes || (PackageRoutes = {}));

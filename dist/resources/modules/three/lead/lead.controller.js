@@ -33,4 +33,4 @@ export var LeadControllerThree;
             next(e);
         }
     };
-})(LeadControllerThree = LeadControllerThree || (LeadControllerThree = {}));
+})(LeadControllerThree || (LeadControllerThree = {}));

@@ -18,4 +18,4 @@ export var UserModel;
     UserModel.AddressModel = mongoose.model('user_address_individual', UserSchema.AddressSchema);
     UserModel.IndividualIdentityModel = mongoose.model('individual_identity', UserSchema.IndividualIdentitySchema);
     UserModel.FPAccountModel = mongoose.model('FPAccount_individual', UserSchema.FPAccountSchema);
-})(UserModel = UserModel || (UserModel = {}));
+})(UserModel || (UserModel = {}));

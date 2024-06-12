@@ -28,4 +28,4 @@ export var BusinessModel;
     BusinessModel.StartBuildingTierThreeFileModel = mongoose.model('business_start_building_tier_three_file', BusinessSchema.StartBuildingTierThreeFileSchema);
     BusinessModel.StartBuildingTierFourModel = mongoose.model('business_start_building_tier_four', BusinessSchema.StartBuildingTierFourSchema);
     BusinessModel.StartBuildingTierFourFileModel = mongoose.model('business_start_building_tier_four_file', BusinessSchema.StartBuildingTierFourFileSchema);
-})(BusinessModel = BusinessModel || (BusinessModel = {}));
+})(BusinessModel || (BusinessModel = {}));

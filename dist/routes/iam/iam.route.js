@@ -26,4 +26,4 @@ export var IamRoutes;
     IamRoutes.role.put('/role/update', validateRequest(IamValidation.role.update));
     IamRoutes.role.delete('/role/delete', validateRequest(IamValidation.role.delete));
     IamRoutes.role.get('/role');
-})(IamRoutes = IamRoutes || (IamRoutes = {}));
+})(IamRoutes || (IamRoutes = {}));

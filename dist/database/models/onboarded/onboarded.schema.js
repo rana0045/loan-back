@@ -75,4 +75,4 @@ export var OnboardedSchema;
         timestamps: true,
         versionKey: false,
     });
-})(OnboardedSchema = OnboardedSchema || (OnboardedSchema = {}));
+})(OnboardedSchema || (OnboardedSchema = {}));

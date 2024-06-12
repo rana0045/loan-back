@@ -14,4 +14,4 @@ export var AclModel;
 (function (AclModel) {
     AclModel.GroupDoc = GroupModel.Group;
     AclModel.RoleDoc = RoleModel.Role;
-})(AclModel = AclModel || (AclModel = {}));
+})(AclModel || (AclModel = {}));

@@ -9,4 +9,4 @@ export var PaymentController;
             next(e);
         }
     };
-})(PaymentController = PaymentController || (PaymentController = {}));
+})(PaymentController || (PaymentController = {}));

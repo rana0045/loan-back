@@ -62,4 +62,4 @@ export var PaymentSchema;
             default: '0',
         },
     }, { timestamps: true, versionKey: false });
-})(PaymentSchema = PaymentSchema || (PaymentSchema = {}));
+})(PaymentSchema || (PaymentSchema = {}));

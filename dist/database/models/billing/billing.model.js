@@ -13,4 +13,4 @@ import { BillingSchema } from './billing.schema.js';
 export var BillingModel;
 (function (BillingModel) {
     BillingModel.ModuleOne = mongoose.model('moduleone_billing', BillingSchema.ModuleOne);
-})(BillingModel = BillingModel || (BillingModel = {}));
+})(BillingModel || (BillingModel = {}));

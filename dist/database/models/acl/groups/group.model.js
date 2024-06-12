@@ -13,4 +13,4 @@ import { GroupSchema } from './group.schema.js';
 export var GroupModel;
 (function (GroupModel) {
     GroupModel.Group = mongoose.model('' + 'AclGroup', GroupSchema);
-})(GroupModel = GroupModel || (GroupModel = {}));
+})(GroupModel || (GroupModel = {}));

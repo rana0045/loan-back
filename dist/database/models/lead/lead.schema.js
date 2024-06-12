@@ -123,4 +123,4 @@ export var LeadSchema;
         timestamps: true,
         versionKey: false,
     });
-})(LeadSchema = LeadSchema || (LeadSchema = {}));
+})(LeadSchema || (LeadSchema = {}));

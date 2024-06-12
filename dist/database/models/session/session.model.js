@@ -14,4 +14,4 @@ export var SessionModel;
 (function (SessionModel) {
     SessionModel.ForgotPassword = mongoose.model('session_forgotpassword', SessionSchema.ForgotPassword);
     SessionModel.User = mongoose.model('session_user', SessionSchema.User);
-})(SessionModel = SessionModel || (SessionModel = {}));
+})(SessionModel || (SessionModel = {}));

@@ -34,4 +34,4 @@ export var IamController;
             next(e);
         }
     };
-})(IamController = IamController || (IamController = {}));
+})(IamController || (IamController = {}));

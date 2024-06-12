@@ -26,4 +26,4 @@ export var LeadServiceFour;
             });
         }
     };
-})(LeadServiceFour = LeadServiceFour || (LeadServiceFour = {}));
+})(LeadServiceFour || (LeadServiceFour = {}));

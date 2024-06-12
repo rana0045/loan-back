@@ -56,4 +56,4 @@ export var BillingSchema;
         timestamps: true,
         versionKey: false,
     });
-})(BillingSchema = BillingSchema || (BillingSchema = {}));
+})(BillingSchema || (BillingSchema = {}));

@@ -84,4 +84,4 @@ export var PackageSchema;
         timestamps: true,
         versionKey: false,
     });
-})(PackageSchema = PackageSchema || (PackageSchema = {}));
+})(PackageSchema || (PackageSchema = {}));

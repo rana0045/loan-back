@@ -9,4 +9,4 @@ export var LeadControllerFour;
             next(e);
         }
     };
-})(LeadControllerFour = LeadControllerFour || (LeadControllerFour = {}));
+})(LeadControllerFour || (LeadControllerFour = {}));

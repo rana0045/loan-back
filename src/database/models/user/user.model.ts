@@ -19,7 +19,7 @@ export namespace UserModel {
   );
   export const BureauCredentialModel = mongoose.model<User.BureauCredential>(
     'bureau_credential_individual',
-    UserSchema.BureauCredentialSchema,
+    UserSchema.BureauCredentialSchema, 
   );
   export const IndividualDetailsModel = mongoose.model<User.IndividualDetails>(
     'user_details_individual',

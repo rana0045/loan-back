@@ -42,4 +42,4 @@ export var ThreeLeadRoutes;
         validateRequest(LeadValidation.Documentation),
         LeadControllerThree.Documentation,
     ]);
-})(ThreeLeadRoutes = ThreeLeadRoutes || (ThreeLeadRoutes = {}));
+})(ThreeLeadRoutes || (ThreeLeadRoutes = {}));

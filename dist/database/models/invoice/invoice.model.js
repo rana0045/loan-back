@@ -13,4 +13,4 @@ import { InvoiceSchema } from './invoice.schema.js';
 export var InvoiceModel;
 (function (InvoiceModel) {
     InvoiceModel.ModuleOne = mongoose.model('moduleone_invoice', InvoiceSchema.ModuleOneSchema);
-})(InvoiceModel = InvoiceModel || (InvoiceModel = {}));
+})(InvoiceModel || (InvoiceModel = {}));

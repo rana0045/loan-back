@@ -22,4 +22,4 @@ export var AuthenticationRoutes;
         validateRequest(AuthenticationValidation.ForgotPassword),
         AuthenticationController.ForgotPassword,
     ]);
-})(AuthenticationRoutes = AuthenticationRoutes || (AuthenticationRoutes = {}));
+})(AuthenticationRoutes || (AuthenticationRoutes = {}));

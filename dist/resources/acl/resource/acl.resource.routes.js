@@ -17,4 +17,4 @@ export var AclResourceRoutes;
     AclResourceRoutes.index.get('/acl.resources', [AclResourceController.ResourceList]);
     AclResourceRoutes.index.get('/acl.resources/:_id', [AclResourceController.ResourceView]);
     AclResourceRoutes.index.put('/acl.resources', [AclResourceController.ResourceEdit]);
-})(AclResourceRoutes = AclResourceRoutes || (AclResourceRoutes = {}));
+})(AclResourceRoutes || (AclResourceRoutes = {}));

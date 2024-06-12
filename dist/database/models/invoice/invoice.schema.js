@@ -25,4 +25,4 @@ export var InvoiceSchema;
         timestamps: true,
         versionKey: true,
     });
-})(InvoiceSchema = InvoiceSchema || (InvoiceSchema = {}));
+})(InvoiceSchema || (InvoiceSchema = {}));

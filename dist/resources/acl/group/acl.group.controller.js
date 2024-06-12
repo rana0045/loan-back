@@ -41,4 +41,4 @@ export var AclGroupController;
             next(e);
         }
     };
-})(AclGroupController = AclGroupController || (AclGroupController = {}));
+})(AclGroupController || (AclGroupController = {}));

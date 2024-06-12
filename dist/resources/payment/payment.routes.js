@@ -19,4 +19,4 @@ export var PaymentRoutes;
         validateRequest(PaymentValidation.Initiate),
         PaymentController.Initiate,
     ]);
-})(PaymentRoutes = PaymentRoutes || (PaymentRoutes = {}));
+})(PaymentRoutes || (PaymentRoutes = {}));

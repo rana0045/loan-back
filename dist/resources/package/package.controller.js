@@ -25,4 +25,4 @@ export var PackageController;
             next(e);
         }
     };
-})(PackageController = PackageController || (PackageController = {}));
+})(PackageController || (PackageController = {}));

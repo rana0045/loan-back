@@ -74,4 +74,4 @@ export var DynamicTemplates;
         success: async (options) => { },
         fail: async (options) => { },
     };
-})(DynamicTemplates = DynamicTemplates || (DynamicTemplates = {}));
+})(DynamicTemplates || (DynamicTemplates = {}));

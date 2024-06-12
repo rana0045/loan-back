@@ -1,11 +1,12 @@
 import { deleteFilesForIdentity } from '../../utils/delete/delete.utils.js';
 import { BusinessModel } from '../../database/models/business_credit/business.model.js';
+import { UserModel } from '../../database/models/user/user.model.js';
 export var BusinessService;
 (function (BusinessService) {
     BusinessService.Name = async (req, res) => {
         try {
-            const { name } = req.body;
-            const userId = res.locals.decode._id;
+            const { name, id } = req.body;
+            const userId = id;
             const newBusinessName = new BusinessModel.NameModel({
                 user_id: userId,
                 name,
@@ -28,7 +29,7 @@ export var BusinessService;
     };
     BusinessService.GetName = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const businessName = await BusinessModel.NameModel.findOne({
                 user_id: userId,
             });
@@ -50,8 +51,8 @@ export var BusinessService;
     };
     BusinessService.Business = async (req, res) => {
         try {
-            const { street, buildingAddress, cityName, zipCode, state, businessAddressType, policy, } = req.body;
-            const userId = res.locals.decode._id;
+            const { street, buildingAddress, cityName, zipCode, state, businessAddressType, policy, id } = req.body;
+            const userId = id;
             const newBusinessAddress = new BusinessModel.AddressModel({
                 user_id: userId,
                 street,
@@ -80,7 +81,7 @@ export var BusinessService;
     };
     BusinessService.GetBusiness = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const businessAddress = await BusinessModel.AddressModel.findOne({
                 user_id: userId,
             });
@@ -102,8 +103,8 @@ export var BusinessService;
     };
     BusinessService.Entity = async (req, res) => {
         try {
-            const { entityType, industry, dateIncorporated, policyOne, policyTwo } = req.body;
-            const userId = res.locals.decode._id;
+            const { entityType, industry, dateIncorporated, policyOne, policyTwo, id } = req.body;
+            const userId = id;
             const newBusinessEntity = new BusinessModel.EntityModel({
                 user_id: userId,
                 entityType,
@@ -130,7 +131,7 @@ export var BusinessService;
     };
     BusinessService.GetEntity = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const businessEntity = await BusinessModel.EntityModel.findOne({
                 user_id: userId,
             });
@@ -152,8 +153,8 @@ export var BusinessService;
     };
     BusinessService.Ein = async (req, res) => {
         try {
-            const { number } = req.body;
-            const userId = res.locals.decode._id;
+            const { number, id } = req.body;
+            const userId = id;
             const newBusinessEin = new BusinessModel.EinModel({
                 user_id: userId,
                 number,
@@ -176,7 +177,7 @@ export var BusinessService;
     };
     BusinessService.GetEin = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const businessEinNumber = await BusinessModel.EinModel.findOne({
                 user_id: userId,
             });
@@ -198,8 +199,8 @@ export var BusinessService;
     };
     BusinessService.PhoneDetails = async (req, res) => {
         try {
-            const { phoneNumber, serviceProvider, faxNumber } = req.body;
-            const userId = res.locals.decode._id;
+            const { phoneNumber, serviceProvider, faxNumber, id } = req.body;
+            const userId = id;
             const newPhoneDetails = new BusinessModel.PhoneDetailsModel({
                 user_id: userId,
                 phoneNumber,
@@ -224,7 +225,7 @@ export var BusinessService;
     };
     BusinessService.GetPhoneDetails = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.PhoneDetailsModel.findOne({
                 user_id: userId,
             });
@@ -246,8 +247,8 @@ export var BusinessService;
     };
     BusinessService.EmailDetails = async (req, res) => {
         try {
-            const { website, email } = req.body;
-            const userId = res.locals.decode._id;
+            const { website, email, id } = req.body;
+            const userId = id;
             const newEmailDetails = new BusinessModel.EmailDetailsModel({
                 user_id: userId,
                 website,
@@ -271,7 +272,7 @@ export var BusinessService;
     };
     BusinessService.GetEmailDetails = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.EmailDetailsModel.findOne({
                 user_id: userId,
             });
@@ -293,8 +294,8 @@ export var BusinessService;
     };
     BusinessService.License = async (req, res) => {
         try {
-            const { businessLicense } = req.body;
-            const userId = res.locals.decode._id;
+            const { businessLicense, id } = req.body;
+            const userId = id;
             const newEmailDetails = new BusinessModel.LicenseModel({
                 user_id: userId,
                 businessLicense,
@@ -317,7 +318,7 @@ export var BusinessService;
     };
     BusinessService.GetLicense = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.LicenseModel.findOne({
                 user_id: userId,
             });
@@ -339,8 +340,8 @@ export var BusinessService;
     };
     BusinessService.BankAccount = async (req, res) => {
         try {
-            const { account } = req.body;
-            const userId = res.locals.decode._id;
+            const { account, id } = req.body;
+            const userId = id;
             const newBankDetails = new BusinessModel.BankModel({
                 user_id: userId,
                 account,
@@ -363,7 +364,7 @@ export var BusinessService;
     };
     BusinessService.GetBankAccount = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.BankModel.findOne({
                 user_id: userId,
             });
@@ -385,8 +386,8 @@ export var BusinessService;
     };
     BusinessService.MerchantBankAccount = async (req, res) => {
         try {
-            const { account } = req.body;
-            const userId = res.locals.decode._id;
+            const { account, id } = req.body;
+            const userId = id;
             const newBankDetails = new BusinessModel.MerchantModel({
                 user_id: userId,
                 account,
@@ -409,7 +410,7 @@ export var BusinessService;
     };
     BusinessService.GetMerchantBankAccount = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.MerchantModel.findOne({
                 user_id: userId,
             });
@@ -431,8 +432,8 @@ export var BusinessService;
     };
     BusinessService.Duns = async (req, res) => {
         try {
-            const { address, policy } = req.body;
-            const userId = res.locals.decode._id;
+            const { address, policy, id } = req.body;
+            const userId = id;
             const newBankDetails = new BusinessModel.DunsModel({
                 user_id: userId,
                 address,
@@ -456,7 +457,7 @@ export var BusinessService;
     };
     BusinessService.GetDuns = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.DunsModel.findOne({
                 user_id: userId,
             });
@@ -478,8 +479,8 @@ export var BusinessService;
     };
     BusinessService.Experian = async (req, res) => {
         try {
-            const { identificationNumber, policy } = req.body;
-            const userId = res.locals.decode._id;
+            const { identificationNumber, policy, id } = req.body;
+            const userId = id;
             const newBankDetails = new BusinessModel.ExperianModel({
                 user_id: userId,
                 identificationNumber,
@@ -503,7 +504,7 @@ export var BusinessService;
     };
     BusinessService.GetExperian = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.ExperianModel.findOne({
                 user_id: userId,
             });
@@ -525,8 +526,8 @@ export var BusinessService;
     };
     BusinessService.Equifax = async (req, res) => {
         try {
-            const { identificationNumber, policy } = req.body;
-            const userId = res.locals.decode._id;
+            const { identificationNumber, policy, id } = req.body;
+            const userId = id;
             const newBankDetails = new BusinessModel.EquifaxModel({
                 user_id: userId,
                 identificationNumber,
@@ -550,7 +551,7 @@ export var BusinessService;
     };
     BusinessService.GetEquifax = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const phoneDetails = await BusinessModel.EquifaxModel.findOne({
                 user_id: userId,
             });
@@ -572,8 +573,8 @@ export var BusinessService;
     };
     BusinessService.StartBuildingTierOne = async (req, res) => {
         try {
-            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
-            const userId = res.locals.decode._id;
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, id } = req.body;
+            const userId = id;
             const newStartBuildingTierOne = new BusinessModel.StartBuildingTierOneModel({
                 user_id: userId,
                 tradeAccount,
@@ -600,7 +601,7 @@ export var BusinessService;
     };
     BusinessService.GetStartBuildingTierOne = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const details = await BusinessModel.StartBuildingTierOneModel.findOne({
                 user_id: userId,
             });
@@ -622,8 +623,8 @@ export var BusinessService;
     };
     BusinessService.StartBuildingTierTwo = async (req, res) => {
         try {
-            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
-            const userId = res.locals.decode._id;
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, id } = req.body;
+            const userId = id;
             const newStartBuildingTierTwo = new BusinessModel.StartBuildingTierTwoModel({
                 user_id: userId,
                 tradeAccount,
@@ -650,7 +651,7 @@ export var BusinessService;
     };
     BusinessService.GetStartBuildingTierTwo = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const details = await BusinessModel.StartBuildingTierTwoModel.findOne({
                 user_id: userId,
             });
@@ -672,8 +673,8 @@ export var BusinessService;
     };
     BusinessService.StartBuildingTierThree = async (req, res) => {
         try {
-            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
-            const userId = res.locals.decode._id;
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, id } = req.body;
+            const userId = id;
             const newStartBuildingTierThree = new BusinessModel.StartBuildingTierThreeModel({
                 user_id: userId,
                 tradeAccount,
@@ -700,7 +701,7 @@ export var BusinessService;
     };
     BusinessService.GetStartBuildingTierThree = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const details = await BusinessModel.StartBuildingTierThreeModel.findOne({
                 user_id: userId,
             });
@@ -722,8 +723,8 @@ export var BusinessService;
     };
     BusinessService.StartBuildingTierFour = async (req, res) => {
         try {
-            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, } = req.body;
-            const userId = res.locals.decode._id;
+            const { tradeAccount, appliedDate, paymentDate, approvedAmount, personalGrant, id } = req.body;
+            const userId = id;
             const newStartBuildingTierFour = new BusinessModel.StartBuildingTierFourModel({
                 user_id: userId,
                 tradeAccount,
@@ -750,7 +751,7 @@ export var BusinessService;
     };
     BusinessService.GetStartBuildingTierFour = async (req, res) => {
         try {
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const details = await BusinessModel.StartBuildingTierFourModel.findOne({
                 user_id: userId,
             });
@@ -783,7 +784,7 @@ export var BusinessService;
                 });
             }
             const einFile = [...fileUploads?.einFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.EinFileModel.findOne({
                 user_id: userId,
             });
@@ -830,7 +831,7 @@ export var BusinessService;
                 });
             }
             const monitorDunsFile = [...fileUploads?.monitorDunsFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.MonitorDunsFileModel.findOne({
                 user_id: userId,
             });
@@ -877,7 +878,7 @@ export var BusinessService;
                 });
             }
             const monitorExperianFile = [...fileUploads?.monitorExperianFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.MonitorExperianFileModel.findOne({
                 user_id: userId,
             });
@@ -924,7 +925,7 @@ export var BusinessService;
                 });
             }
             const monitorEquifaxFile = [...fileUploads?.monitorEquifaxFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.MonitorEquifaxFileModel.findOne({
                 user_id: userId,
             });
@@ -971,7 +972,7 @@ export var BusinessService;
                 });
             }
             const lexisFile = [...fileUploads?.lexisFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.LexisFileModel.findOne({
                 user_id: userId,
             });
@@ -1018,7 +1019,7 @@ export var BusinessService;
                 });
             }
             const chexSystemFile = [...fileUploads?.chexSystemFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.ChexSystemFileModel.findOne({
                 user_id: userId,
             });
@@ -1065,7 +1066,7 @@ export var BusinessService;
                 });
             }
             const startBuildingTierOneFile = [...fileUploads?.startBuildingTierOneFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.StartBuildingTierOneFileModel.findOne({
                 user_id: userId,
             });
@@ -1112,7 +1113,7 @@ export var BusinessService;
                 });
             }
             const startBuildingTierTwoFile = [...fileUploads?.startBuildingTierTwoFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.StartBuildingTierTwoFileModel.findOne({
                 user_id: userId,
             });
@@ -1159,7 +1160,7 @@ export var BusinessService;
                 });
             }
             const startBuildingTierThreeFile = [...fileUploads?.startBuildingTierThreeFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.StartBuildingTierThreeFileModel.findOne({
                 user_id: userId,
             });
@@ -1206,7 +1207,7 @@ export var BusinessService;
                 });
             }
             const startBuildingTierFourFile = [...fileUploads?.startBuildingTierFourFile];
-            const userId = res.locals.decode._id;
+            const userId = req.params.id;
             const oldUserData = await BusinessModel.StartBuildingTierFourFileModel.findOne({
                 user_id: userId,
             });
@@ -1240,4 +1241,26 @@ export var BusinessService;
             });
         }
     };
-})(BusinessService = BusinessService || (BusinessService = {}));
+    BusinessService.GetAllUsers = async (req, res) => {
+        try {
+            const userId = res.locals.decode._id;
+            // const details = await  UserModel.IndividualDetailsModel.find({});
+            // const details2 = await  UserModel.CredentialModel.find({}, { password: 0 });
+            const userDetailsWithCredentials = await UserModel.IndividualDetailsModel.find({}).populate('user_id', '-password').exec();
+            return Promise.resolve({
+                code: 200,
+                Success: true,
+                message: 'get successfully',
+                data: userDetailsWithCredentials,
+            });
+        }
+        catch (e) {
+            console.error('Error:', e);
+            return Promise.reject({
+                code: 500,
+                Success: false,
+                message: 'Internal Server Error',
+            });
+        }
+    };
+})(BusinessService || (BusinessService = {}));

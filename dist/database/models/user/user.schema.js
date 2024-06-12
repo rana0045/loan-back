@@ -159,4 +159,4 @@ export var UserSchema;
         timestamps: true,
         versionKey: false,
     });
-})(UserSchema = UserSchema || (UserSchema = {}));
+})(UserSchema || (UserSchema = {}));

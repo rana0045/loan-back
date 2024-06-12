@@ -16,4 +16,4 @@ export var AuthorizationService;
         }
         catch (e) { }
     };
-})(AuthorizationService = AuthorizationService || (AuthorizationService = {}));
+})(AuthorizationService || (AuthorizationService = {}));

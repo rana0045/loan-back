@@ -25,4 +25,4 @@ export var AuthenticationValidation;
             email: z.string().email('Enter valid email').min(1, 'Email Required'),
         }),
     };
-})(AuthenticationValidation = AuthenticationValidation || (AuthenticationValidation = {}));
+})(AuthenticationValidation || (AuthenticationValidation = {}));

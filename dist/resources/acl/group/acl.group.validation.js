@@ -34,4 +34,4 @@ export var AclGroupValidation;
         })
             .strict(),
     };
-})(AclGroupValidation = AclGroupValidation || (AclGroupValidation = {}));
+})(AclGroupValidation || (AclGroupValidation = {}));

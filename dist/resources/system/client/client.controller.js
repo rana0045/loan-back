@@ -9,4 +9,4 @@ export var ClientController;
             next(e);
         }
     };
-})(ClientController = ClientController || (ClientController = {}));
+})(ClientController || (ClientController = {}));

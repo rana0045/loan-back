@@ -13,4 +13,4 @@ import { PaymentSchema } from './payment.schema.js';
 export var PaymentModal;
 (function (PaymentModal) {
     PaymentModal.ModuleOne = mongoose.model('moduleone_payment', PaymentSchema.ModuleOneSchema);
-})(PaymentModal = PaymentModal || (PaymentModal = {}));
+})(PaymentModal || (PaymentModal = {}));

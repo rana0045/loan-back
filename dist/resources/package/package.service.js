@@ -113,4 +113,4 @@ export var PackageService;
             });
         }
     };
-})(PackageService = PackageService || (PackageService = {}));
+})(PackageService || (PackageService = {}));

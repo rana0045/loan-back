@@ -19,4 +19,4 @@ export var USAGovernmentIssuedID;
     USAGovernmentIssuedID["DS2019Form"] = "Form DS-2019";
     USAGovernmentIssuedID["I797Form"] = "Form I-797";
     USAGovernmentIssuedID["SSN"] = "Social Security Number";
-})(USAGovernmentIssuedID = USAGovernmentIssuedID || (USAGovernmentIssuedID = {}));
+})(USAGovernmentIssuedID || (USAGovernmentIssuedID = {}));

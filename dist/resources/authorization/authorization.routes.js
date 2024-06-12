@@ -23,4 +23,4 @@ export var AuthenticationRoutes;
     AuthenticationRoutes.index.post('/authorization.account_activation');
     AuthenticationRoutes.index.post('/authorization.sign_out');
     AuthenticationRoutes.index.get('/authorization.permissions');
-})(AuthenticationRoutes = AuthenticationRoutes || (AuthenticationRoutes = {}));
+})(AuthenticationRoutes || (AuthenticationRoutes = {}));

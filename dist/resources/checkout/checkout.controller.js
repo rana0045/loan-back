@@ -25,4 +25,4 @@ export var CheckoutController;
             next(e);
         }
     };
-})(CheckoutController = CheckoutController || (CheckoutController = {}));
+})(CheckoutController || (CheckoutController = {}));

@@ -19,4 +19,4 @@ export var AuthorizationValidation;
             .strict(),
         query: z.object({}).strict(),
     };
-})(AuthorizationValidation = AuthorizationValidation || (AuthorizationValidation = {}));
+})(AuthorizationValidation || (AuthorizationValidation = {}));

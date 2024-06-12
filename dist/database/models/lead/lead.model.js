@@ -17,4 +17,4 @@ export var LeadModel;
     LeadModel.BusinessFundingApplicantDetailsModel = mongoose.model('business_funding_applicant_details', LeadSchema.BusinessFundingApplicantDetailsSchema);
     LeadModel.BusinessFundingLoanDetailsModel = mongoose.model('business_funding_loan_details', LeadSchema.BusinessFundingLoanDetailsSchema);
     LeadModel.BusinessFundingDocumentationModel = mongoose.model('business_funding_documentation', LeadSchema.BusinessFundingDocumentationSchema);
-})(LeadModel = LeadModel || (LeadModel = {}));
+})(LeadModel || (LeadModel = {}));

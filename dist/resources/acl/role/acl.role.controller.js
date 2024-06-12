@@ -41,4 +41,4 @@ export var AclRoleController;
             next(e);
         }
     };
-})(AclRoleController = AclRoleController || (AclRoleController = {}));
+})(AclRoleController || (AclRoleController = {}));

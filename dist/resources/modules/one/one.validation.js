@@ -72,4 +72,4 @@ export var OneValidation;
         })
             .strict(),
     };
-})(OneValidation = OneValidation || (OneValidation = {}));
+})(OneValidation || (OneValidation = {}));

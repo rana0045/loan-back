@@ -25,4 +25,4 @@ export var AclGroupRoutes;
     ]);
     AclGroupRoutes.index.get('/acl.group', [AclGroupController.GroupList]);
     AclGroupRoutes.index.get('/acl.group/:_id', [AclGroupController.GroupView]);
-})(AclGroupRoutes = AclGroupRoutes || (AclGroupRoutes = {}));
+})(AclGroupRoutes || (AclGroupRoutes = {}));

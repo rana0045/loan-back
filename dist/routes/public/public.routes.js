@@ -19,4 +19,4 @@ export var PublicRoutes;
         ThreeLeadRoutes.index,
         FourLeadRoutes.index,
     ]);
-})(PublicRoutes = PublicRoutes || (PublicRoutes = {}));
+})(PublicRoutes || (PublicRoutes = {}));

@@ -118,4 +118,4 @@ export var LeadServiceThree;
             });
         }
     };
-})(LeadServiceThree = LeadServiceThree || (LeadServiceThree = {}));
+})(LeadServiceThree || (LeadServiceThree = {}));

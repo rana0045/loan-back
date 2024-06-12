@@ -41,4 +41,4 @@ export var OneRoutes;
         validateRequest(OneValidation.docs),
         OneController.Docs,
     ]);
-})(OneRoutes = OneRoutes || (OneRoutes = {}));
+})(OneRoutes || (OneRoutes = {}));

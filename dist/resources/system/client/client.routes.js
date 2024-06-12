@@ -17,4 +17,4 @@ export var ClientRoutes;
     // index.get('/system.client/:id', [PackageController.PackageUpdate]);
     // index.get('/package', [PackageController.PackageList]);
     // index.delete('/package/:id');
-})(ClientRoutes = ClientRoutes || (ClientRoutes = {}));
+})(ClientRoutes || (ClientRoutes = {}));

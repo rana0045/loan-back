@@ -124,7 +124,13 @@ export var CheckoutService;
                 });
             }
             const decode = res.locals.decode;
+            const user = await UserModel.CredentialModel.findById(decode._id);
             const findPackage = await PackageModel.MPackageModel.findById(req.body?.packageId);
+            const idMatch = '65dc89c077830153f747c3b2' === req.body?.packageId ? true : false;
+            const urlPathSuccess = 'http://54.87.77.177:3000/step1/monitor-report';
+            const urlPathCancel = 'http://54.87.77.177:3000/business-account';
+            const id = user?._id?.toString();
+            const packageid = findPackage?._id.toString();
             if (paymentType === 'full') {
                 const test = await stripe.checkout.sessions.create({
                     customer_email: decode?.email,
@@ -136,9 +142,16 @@ export var CheckoutService;
                             quantity: 1,
                         },
                     ],
-                    success_url: 'https://loan-client.vercel.app/onboarding/pcr/docs-upload',
-                    cancel_url: 'https://loan-client.vercel.app/onboarding/pcr/plans',
+                    success_url: idMatch ? urlPathSuccess : 'http://54.87.77.177:3000/onboarding/pcr/docs-upload',
+                    cancel_url: idMatch ? urlPathCancel : 'http://54.87.77.177:3000/onboarding/pcr/plans',
                     currency: 'USD',
+                    metadata: {
+                        userId: id,
+                        email: user?.email,
+                        package: packageid,
+                        billingType: paymentType,
+                        amount: findPackage?.pricing?.fullPrice,
+                    },
                 });
                 return Promise.resolve({
                     code: 200,
@@ -159,9 +172,16 @@ export var CheckoutService;
                             quantity: 1,
                         },
                     ],
-                    success_url: 'https://loan-client.vercel.app/onboarding/pcr/docs-upload',
-                    cancel_url: 'https://loan-client.vercel.app/onboarding/pcr/plans',
+                    success_url: idMatch ? urlPathSuccess : 'http://54.87.77.177:3000/onboarding/pcr/docs-upload',
+                    cancel_url: idMatch ? urlPathCancel : 'http://54.87.77.177:3000/onboarding/pcr/plans',
                     currency: 'USD',
+                    metadata: {
+                        userId: id,
+                        email: user?.email,
+                        package: packageid,
+                        billingType: paymentType,
+                        amount: findPackage?.pricing?.emiPrice,
+                    },
                 });
                 return Promise.resolve({
                     code: 200,
@@ -185,7 +205,7 @@ export var CheckoutService;
             });
         }
     };
-})(CheckoutService = CheckoutService || (CheckoutService = {}));
+})(CheckoutService || (CheckoutService = {}));
 // line_items: [
 //   { price: findPackage?.stripe.fullPriceId, quantity: '1' },
 // ],

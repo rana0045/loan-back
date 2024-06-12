@@ -439,4 +439,4 @@ export var BusinessSchema;
         timestamps: true,
         versionKey: false,
     });
-})(BusinessSchema = BusinessSchema || (BusinessSchema = {}));
+})(BusinessSchema || (BusinessSchema = {}));

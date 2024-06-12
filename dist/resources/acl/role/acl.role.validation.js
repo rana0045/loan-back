@@ -34,4 +34,4 @@ export var AclRoleValidation;
         })
             .strict(),
     };
-})(AclRoleValidation = AclRoleValidation || (AclRoleValidation = {}));
+})(AclRoleValidation || (AclRoleValidation = {}));

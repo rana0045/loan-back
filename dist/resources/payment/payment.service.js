@@ -96,4 +96,4 @@ export var PaymentService;
             });
         }
     };
-})(PaymentService = PaymentService || (PaymentService = {}));
+})(PaymentService || (PaymentService = {}));

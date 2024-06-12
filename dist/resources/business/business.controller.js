@@ -363,4 +363,14 @@ export var BusinessController;
             next(e);
         }
     };
-})(BusinessController = BusinessController || (BusinessController = {}));
+    BusinessController.GetAllUsers = async (req, res, next) => {
+        try {
+            res
+                .status(201)
+                .json(await BusinessService.GetAllUsers(req, res));
+        }
+        catch (e) {
+            next(e);
+        }
+    };
+})(BusinessController || (BusinessController = {}));

@@ -13,4 +13,4 @@ import { EmiSchema } from './emi.schema.js';
 export var EmiModel;
 (function (EmiModel) {
     EmiModel.ModuleOne = mongoose.model('moduleone_emi', EmiSchema.ModuleOneSchema);
-})(EmiModel = EmiModel || (EmiModel = {}));
+})(EmiModel || (EmiModel = {}));

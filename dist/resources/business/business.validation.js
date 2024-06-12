@@ -8,4 +8,4 @@ export var BusinessValidation;
         })
             .strict(),
     };
-})(BusinessValidation = BusinessValidation || (BusinessValidation = {}));
+})(BusinessValidation || (BusinessValidation = {}));

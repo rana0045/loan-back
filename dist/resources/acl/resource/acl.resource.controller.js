@@ -41,4 +41,4 @@ export var AclResourceController;
             next(e);
         }
     };
-})(AclResourceController = AclResourceController || (AclResourceController = {}));
+})(AclResourceController || (AclResourceController = {}));

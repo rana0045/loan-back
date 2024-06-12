@@ -13,4 +13,4 @@ import { PackageSchema } from './package.schema.js';
 export var PackageModel;
 (function (PackageModel) {
     PackageModel.MPackageModel = mongoose.model('m_package', PackageSchema.MPackageSchema);
-})(PackageModel = PackageModel || (PackageModel = {}));
+})(PackageModel || (PackageModel = {}));

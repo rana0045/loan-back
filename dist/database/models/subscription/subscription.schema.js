@@ -35,4 +35,4 @@ export var SubscriptionSchema;
         timestamps: true,
         versionKey: false,
     });
-})(SubscriptionSchema = SubscriptionSchema || (SubscriptionSchema = {}));
+})(SubscriptionSchema || (SubscriptionSchema = {}));

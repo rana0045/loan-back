@@ -19,4 +19,4 @@ export var FourLeadRoutes;
         validateRequest(LeadValidation.LeadRequest),
         LeadControllerFour.Add,
     ]);
-})(FourLeadRoutes = FourLeadRoutes || (FourLeadRoutes = {}));
+})(FourLeadRoutes || (FourLeadRoutes = {}));

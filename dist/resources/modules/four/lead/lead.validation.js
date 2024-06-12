@@ -23,4 +23,4 @@ export var LeadValidation;
         })
             .strict(),
     };
-})(LeadValidation = LeadValidation || (LeadValidation = {}));
+})(LeadValidation || (LeadValidation = {}));

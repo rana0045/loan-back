@@ -69,4 +69,4 @@ export var LeadValidation;
             ownership: z.string(),
         }),
     };
-})(LeadValidation = LeadValidation || (LeadValidation = {}));
+})(LeadValidation || (LeadValidation = {}));

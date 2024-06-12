@@ -27,4 +27,4 @@ export var TemplateSchema;
         timestamps: true,
         versionKey: false,
     });
-})(TemplateSchema = TemplateSchema || (TemplateSchema = {}));
+})(TemplateSchema || (TemplateSchema = {}));

@@ -13,7 +13,7 @@ import { CheckUserHelper } from '../../helper/check_user/check.user.helper.js';
 export class Template {
     static sendEmail = async (data) => {
         return await EmailConfig.init.sendMail({
-            from: '"no-reply" <admin@tgiscaleme.com>',
+            from: '"no-reply" <admin@tgiscaleme.com>', // sender address
             to: data?.to,
             subject: data?.subject,
             text: data?.text,

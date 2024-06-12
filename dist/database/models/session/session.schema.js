@@ -29,4 +29,4 @@ export var SessionSchema;
         timestamps: true,
         versionKey: false,
     });
-})(SessionSchema = SessionSchema || (SessionSchema = {}));
+})(SessionSchema || (SessionSchema = {}));

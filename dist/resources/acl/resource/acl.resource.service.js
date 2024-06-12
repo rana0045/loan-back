@@ -35,4 +35,4 @@ export var AclResourceService;
             return Promise.reject(e);
         }
     };
-})(AclResourceService = AclResourceService || (AclResourceService = {}));
+})(AclResourceService || (AclResourceService = {}));

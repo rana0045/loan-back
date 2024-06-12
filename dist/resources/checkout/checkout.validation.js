@@ -27,4 +27,4 @@ export var CheckoutValidation;
         })
             .strict(),
     };
-})(CheckoutValidation = CheckoutValidation || (CheckoutValidation = {}));
+})(CheckoutValidation || (CheckoutValidation = {}));

@@ -41,6 +41,17 @@ export var AuthenticationService;
                         issuer: 'Sourav Ganguli',
                     });
                     authenticationEvent.emit('signinsession', checkUser._id);
+                    if (checkUser.role === 'PCR:Admin') {
+                        return Promise.resolve({
+                            code: 200,
+                            Success: true,
+                            message: 'Sign in successfully',
+                            urlPath: '/client-dashboard',
+                            accessToken,
+                            role: checkUser.role,
+                            refreshToken,
+                        });
+                    }
                     if (checkUser.group === 'PCR' && checkUser.role === 'PCR:Customer') {
                         return Promise.resolve({
                             code: 200,
@@ -148,4 +159,4 @@ export var AuthenticationService;
             });
         }
     };
-})(AuthenticationService = AuthenticationService || (AuthenticationService = {}));
+})(AuthenticationService || (AuthenticationService = {}));

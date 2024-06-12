@@ -24,4 +24,4 @@ export var PrivateRoutes;
         LeadsRoutes.index,
         BusinessRoutes.index
     ]);
-})(PrivateRoutes = PrivateRoutes || (PrivateRoutes = {}));
+})(PrivateRoutes || (PrivateRoutes = {}));

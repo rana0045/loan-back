@@ -211,4 +211,4 @@ export var IamService;
             }
         },
     };
-})(IamService = IamService || (IamService = {}));
+})(IamService || (IamService = {}));

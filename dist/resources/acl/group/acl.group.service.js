@@ -35,4 +35,4 @@ export var AclGroupService;
             return Promise.reject(e);
         }
     };
-})(AclGroupService = AclGroupService || (AclGroupService = {}));
+})(AclGroupService || (AclGroupService = {}));

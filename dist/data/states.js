@@ -50,4 +50,4 @@ export var USAStates;
     USAStates["WestVirginia"] = "West Virginia";
     USAStates["Wisconsin"] = "Wisconsin";
     USAStates["Wyoming"] = "Wyoming";
-})(USAStates = USAStates || (USAStates = {}));
+})(USAStates || (USAStates = {}));

@@ -19,4 +19,4 @@ export var GroupCheckGuardMiddleware;
             next(e);
         }
     };
-})(GroupCheckGuardMiddleware = GroupCheckGuardMiddleware || (GroupCheckGuardMiddleware = {}));
+})(GroupCheckGuardMiddleware || (GroupCheckGuardMiddleware = {}));

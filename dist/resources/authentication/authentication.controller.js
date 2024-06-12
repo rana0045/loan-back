@@ -27,4 +27,4 @@ export var AuthenticationController;
             next(e);
         }
     };
-})(AuthenticationController = AuthenticationController || (AuthenticationController = {}));
+})(AuthenticationController || (AuthenticationController = {}));
